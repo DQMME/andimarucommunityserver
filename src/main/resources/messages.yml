@@ -66,3 +66,5 @@ not_a_player: "${prefix} §cThis needs to be ran as a player."
 invalid_usage: "${prefix} §cInvalid usage. Right usage: ${command_usage}"
 #Available variables: ${needed_permission}
 no_permissions: "${prefix} §cYou don't have enough permissions. You need §e${needed_permission}"
+#Available variables: none
+files_reloaded: "${prefix} §aSuccessfully reloaded every file."

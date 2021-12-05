@@ -2,6 +2,7 @@ package de.dqmme.andimaru
 
 import de.dqmme.andimaru.command.CoinsCommand
 import de.dqmme.andimaru.command.CommandSignCommand
+import de.dqmme.andimaru.command.CommunityCommand
 import de.dqmme.andimaru.listener.*
 import de.dqmme.andimaru.manager.EntityManager
 import de.dqmme.andimaru.util.messageFile
@@ -32,6 +33,7 @@ class AndimaruCommunity : KSpigot() {
     private fun registerCommands() {
         CoinsCommand()
         CommandSignCommand()
+        CommunityCommand()
     }
 
     private fun registerListeners() {

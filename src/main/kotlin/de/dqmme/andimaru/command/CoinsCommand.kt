@@ -13,25 +13,6 @@ class CoinsCommand : BukkitCommand("coins") {
         server.commandMap.register("coins", this)
     }
 
-    override fun tabComplete(sender: CommandSender, alias: String, args: Array<out String>): MutableList<String> {
-        val players = mutableListOf<String>()
-        server.onlinePlayers.forEach {
-            players.add(it.name)
-        }
-
-        if (!sender.hasPermission("communtiy.command.coins.admin") && !sender.hasPermission("community.*")) {
-            if (args.size == 1) return players
-
-            return mutableListOf()
-        }
-
-        if (args.size == 1) return players
-
-        if (args.size == 2) return mutableListOf("add", "set", "remove")
-
-        return mutableListOf()
-    }
-
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {
         if (args.isEmpty()) {
             if (sender !is Player) {
@@ -153,5 +134,24 @@ class CoinsCommand : BukkitCommand("coins") {
             )
         }
         return true
+    }
+
+    override fun tabComplete(sender: CommandSender, alias: String, args: Array<out String>): MutableList<String> {
+        val players = mutableListOf<String>()
+        server.onlinePlayers.forEach {
+            players.add(it.name)
+        }
+
+        if (!sender.hasPermission("communtiy.command.coins.admin") && !sender.hasPermission("community.*")) {
+            if (args.size == 1) return players
+
+            return mutableListOf()
+        }
+
+        if (args.size == 1) return players
+
+        if (args.size == 2) return mutableListOf("add", "set", "remove")
+
+        return mutableListOf()
     }
 }

@@ -12,7 +12,7 @@ class CommandSignCommand : BukkitCommand("commandsign") {
     private val server = KSpigotMainInstance.server
 
     init {
-        permission = "community.commandsign"
+        permission = "community.command.commandsign"
         server.commandMap.register("commandsign", this)
     }
 

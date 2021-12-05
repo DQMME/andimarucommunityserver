@@ -22,6 +22,19 @@ night_skipped: "${prefix} §aThe night was skipped successful."
 #Available variables: ${player_color}, ${player_name}, ${message}
 chat_format: "${player_color}${player_name}§7: §f${message}"
 
+#BuyClaims
+
+#Available variables: none
+claim_not_found: "${prefix} §cThat is not a claim."
+#Available variables: none
+buyclaim_not_found: "${prefix} §cThat is not a registered claim to buy."
+#Available variables: ${price}, ${player_coins}
+buyclaim_bought: "${prefix} §aYou successfully bought this §eClaim §afor §6${price} Coins§a. You now have §6${player_coins} Coins§a."
+#Available variables: none
+buyclaim_removed: "${prefix} §aYou successfully removed this BuyClaim."
+#Available variables: ${price}
+buyclaim_registered: "${prefix} §aYou successfully registered a new BuyClaim for §6${price} Coins $a."
+
 #Coins
 
 #Available variables: ${player_coins}

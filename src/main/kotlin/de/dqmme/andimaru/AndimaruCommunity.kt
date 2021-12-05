@@ -3,12 +3,14 @@ package de.dqmme.andimaru
 import de.dqmme.andimaru.command.*
 import de.dqmme.andimaru.listener.*
 import de.dqmme.andimaru.manager.EntityManager
+import de.dqmme.andimaru.manager.reloadBuyClaims
 import de.dqmme.andimaru.util.*
 import net.axay.kspigot.main.KSpigot
 
 class AndimaruCommunity : KSpigot() {
     override fun startup() {
         saveFiles()
+        reloadBuyClaims()
         reloadCoins()
         reloadConfigFile()
         reloadCommandSigns()

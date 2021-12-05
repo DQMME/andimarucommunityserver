@@ -11,18 +11,18 @@ repositories {
     mavenCentral()
     maven("https://papermc.io/repo/repository/maven-public/")
     maven("https://repo.codemc.io/repository/maven-snapshots/")
+    maven("https://jitpack.io")
 }
 
 dependencies {
     // PaperMC Dependency
-    compileOnly("io.papermc.paper:paper-api:1.18-R0.1-SNAPSHOT") // Only used on compile time because we have a PaperMC Server so we don't need it in the final jar
+    compileOnly("io.papermc.paper:paper-api:1.18-R0.1-SNAPSHOT")
 
     // KSpigot dependency
     implementation("net.axay:kspigot:1.17.4")
 
-    // You can add Dependencies here
-    // For Example:
-    // implementation("io.ktor", "ktor-client", "1.4.0") // This would be shaded into the final jar
+    // GriefPrevention dependency
+    implementation("com.github.TechFortress:GriefPrevention:16.17.1")
 }
 
 tasks {

@@ -56,6 +56,13 @@ commandsign_removed: "${prefix} §aCommandSign removed successfully."
 #Available variables: ${command}, ${x}, ${y}, ${z}
 commandsign_created: "${prefix} §aCommandSign with the command §e/${command} at §e${x}§7, §e${y}§7, §e${z}§a was created successfully."
 
+#GameMode
+
+#Available variables: ${gamemode}
+your_gamemode_set: "${prefix} §aYour §eGamemode §awas set to §e${gamemode}§a."
+#Available variables: ${player_name}, ${gamemode}
+gamemode_set: "${prefix} §aYou successfully set the §eGamemode §aof §b${player_name} §ato §e${gamemode}§a."
+
 #Misc
 
 #Available variables: ${player_name}

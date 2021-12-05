@@ -102,6 +102,17 @@ teleported_to_spawn: "${prefix} §aYou were successfully teleported to the spawn
 #Available variables: ${world}, ${x}, ${y}, ${z}
 spawn_set: "${prefix} §aYou successfully set the §espawn §ato §e${world}§7, §e${x}§7, §e${y}§7, §e${z}§a."
 
+#WorldManager
+
+#Available variables: ${world_name}
+world_not_found: "${prefix} §cCan't find a world named §e${world_name}§c."
+#Available variables: ${world_name}
+teleported_to_world: "${prefix} §aYou was successfully teleported to the world §e${world_name}§a."
+#Available variables: ${world_name}
+world_removed: "${prefix} §aYou successfully removed the world §e${world_name}§a."
+#Available variables: ${world_name}
+world_created: "${prefix} §aYou successfully created the world §e{world_name}§a."
+
 #Misc
 
 #Available variables: ${player_name}

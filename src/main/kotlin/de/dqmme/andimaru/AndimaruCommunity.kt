@@ -31,6 +31,7 @@ class AndimaruCommunity : KSpigot() {
     }
 
     private fun registerCommands() {
+        BuyClaimCommand()
         CoinsCommand()
         CommandSignCommand()
         CommunityCommand()
@@ -40,6 +41,7 @@ class AndimaruCommunity : KSpigot() {
         SetHomeCommand()
         SetSpawnCommand()
         SpawnCommand()
+        WorldManagerCommand()
     }
 
     private fun registerListeners() {

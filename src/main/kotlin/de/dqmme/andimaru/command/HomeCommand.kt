@@ -24,10 +24,10 @@ class HomeCommand : BukkitCommand("home") {
 
         if (args.isEmpty()) {
             sender.openGUI(sender.homeGUI())
-        } else if(args.size == 1) {
+        } else if (args.size == 1) {
             val homeNumber = args[0].toIntOrNull()
 
-            if(homeNumber == null) {
+            if (homeNumber == null) {
                 sender.sendMessage(
                     message("invalid_usage")
                         .replace("\${command_usage}", "/home <home>")
@@ -37,7 +37,7 @@ class HomeCommand : BukkitCommand("home") {
 
             val home = sender.home(homeNumber)
 
-            if(home == null) {
+            if (home == null) {
                 sender.sendMessage(message("home_not_found"))
                 return false
             }

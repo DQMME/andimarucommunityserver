@@ -1,7 +1,6 @@
 package de.dqmme.andimaru.command
 
 import de.dqmme.andimaru.util.message
-import net.axay.kspigot.extensions.server
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.GameMode
 import org.bukkit.command.CommandSender
@@ -72,14 +71,17 @@ class GamemodeCommand : BukkitCommand("gamemode") {
                 else -> {
                     sender.sendMessage(
                         message("invalid_usage")
-                            .replace("\${command_usage}", "/gamemode <0/s/survival, 1/c/creative, 2/a/adventure, 3/spec/spectator>")
+                            .replace(
+                                "\${command_usage}",
+                                "/gamemode <0/s/survival, 1/c/creative, 2/a/adventure, 3/spec/spectator>"
+                            )
                     )
                 }
             }
-        } else if(args.size == 2) {
+        } else if (args.size == 2) {
             val target = server.getPlayer(args[1])
 
-            if(target == null) {
+            if (target == null) {
                 sender.sendMessage(
                     message("player_not_found")
                         .replace("\${player_name}", args[1])
@@ -151,7 +153,10 @@ class GamemodeCommand : BukkitCommand("gamemode") {
                 else -> {
                     sender.sendMessage(
                         message("invalid_usage")
-                            .replace("\${command_usage}", "/gamemode <0/s/survival, 1/c/creative, 2/a/adventure, 3/spec/spectator>")
+                            .replace(
+                                "\${command_usage}",
+                                "/gamemode <0/s/survival, 1/c/creative, 2/a/adventure, 3/spec/spectator>"
+                            )
                     )
                 }
             }
@@ -160,9 +165,22 @@ class GamemodeCommand : BukkitCommand("gamemode") {
     }
 
     override fun tabComplete(sender: CommandSender, alias: String, args: Array<out String>): MutableList<String> {
-        if(args.size == 1) return mutableListOf("0", "s", "survival", "1", "c", "creative", "2", "a", "adventure", "3", "spec", "spectator")
+        if (args.size == 1) return mutableListOf(
+            "0",
+            "s",
+            "survival",
+            "1",
+            "c",
+            "creative",
+            "2",
+            "a",
+            "adventure",
+            "3",
+            "spec",
+            "spectator"
+        )
 
-        if(args.size == 2) {
+        if (args.size == 2) {
             val players = mutableListOf<String>()
             server.onlinePlayers.forEach {
                 players.add(it.name)

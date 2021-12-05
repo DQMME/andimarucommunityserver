@@ -9,12 +9,12 @@ fun onRespawn() = listen<PlayerRespawnEvent> { event ->
     val player = event.player
     val firstHome = player.home(1)
 
-    if(firstHome != null) {
+    if (firstHome != null) {
         event.respawnLocation = firstHome.location
     } else {
         val spawn = spawnLocation()
 
-        if(spawn != null) {
+        if (spawn != null) {
             player.teleportAsync(spawn)
         }
     }

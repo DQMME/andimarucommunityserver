@@ -33,7 +33,7 @@ class CommunityCommand : BukkitCommand("community") {
             return false
         }
 
-        when(args[0].lowercase()) {
+        when (args[0].lowercase()) {
             "reload" -> {
                 reloadCoins()
                 reloadCommandSigns()
@@ -53,7 +53,7 @@ class CommunityCommand : BukkitCommand("community") {
     }
 
     override fun tabComplete(sender: CommandSender, alias: String, args: Array<out String>): MutableList<String> {
-        if(args.size == 1) return mutableListOf("reload")
+        if (args.size == 1) return mutableListOf("reload")
 
         return mutableListOf()
     }

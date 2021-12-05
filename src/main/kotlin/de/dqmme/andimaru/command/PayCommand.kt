@@ -5,7 +5,6 @@ import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.command.CommandSender
 import org.bukkit.command.defaults.BukkitCommand
 import org.bukkit.entity.Player
-import kotlin.text.replace
 
 class PayCommand : BukkitCommand("pay") {
     private val server = KSpigotMainInstance.server
@@ -33,7 +32,7 @@ class PayCommand : BukkitCommand("pay") {
 
             val coins = args[1].toIntOrNull()?.toDouble()
 
-            if(coins == null) {
+            if (coins == null) {
                 sender.sendMessage(
                     message("invalid_usage")
                         .replace("\${command_usage}", "/pay <player> <coins>")
@@ -43,7 +42,7 @@ class PayCommand : BukkitCommand("pay") {
 
             val playerCoins = sender.coins()
 
-            if(playerCoins < coins) {
+            if (playerCoins < coins) {
                 sender.sendMessage(message("not_enough_coins"))
                 return false
             }
@@ -70,7 +69,7 @@ class PayCommand : BukkitCommand("pay") {
     }
 
     override fun tabComplete(sender: CommandSender, alias: String, args: Array<out String>): MutableList<String> {
-        if(args.size == 1) {
+        if (args.size == 1) {
             val players = mutableListOf<String>()
             server.onlinePlayers.forEach {
                 players.add(it.name)

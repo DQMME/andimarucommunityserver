@@ -1,0 +1,68 @@
+#Prefix variable. You can use it in every message.
+#Usage: ${prefix}
+prefix: "§7[§6Community§7]"
+
+#Events
+
+#Available variables: ${player_color}, ${player_name}
+player_joined: "${prefix} ${player_color}${player_name} §ajoined the game."
+#Available variables: ${player_color}, ${player_name}
+player_left: "${prefix} ${player_color}${player_name} §cleft the game."
+#Available variables: ${player_color}, ${player_name} ${deaths}
+player_died: "${prefix} ${player_color}${player_name} §cdied. §7(§cDeath ${deaths}§7)"
+#Available variables: ${player_color}, ${player_name}, ${players_in_bed}, ${required_players}
+player_entered_bed: "${prefix} ${player_color}${player_name} §aentered a bed. §7[§a${players_in_bed}§7/§a${required_players}§7]"
+#Available variables: ${player_color}, ${player_name}, ${players_in_bed}, ${required_players}
+player_left_bed: "${prefix} ${player_color}${player_name} §cleft the bed. §7[§a${players_in_bed}§7/§a${required_players}§7]"
+#Available variables: none
+night_skipped: "${prefix} §aThe night was skipped successful."
+
+#Chat
+
+#Available variables: ${player_color}, ${player_name}, ${message}
+chat_format: "${player_color}${player_name}§7: §f${message}"
+
+#Coins
+
+#Available variables: ${player_coins}
+your_coins: "${prefix} §7You got §6${player_coins} Coins§7."
+#Available variables: ${player_name}, ${player_coins}
+coins: "${prefix} §b${player_name} §7has §6${player_coins} Coins§7."
+#Available variables: ${new_coins}
+your_coins_set: "${prefix} §aYour §6Coins §awere set to §6${new_coins}§a."
+#Available variables: ${player_name}, ${new_coins}
+coins_set: "${prefix} §aYou successfully set the §6Coins §aof §b${player_name} §ato §6${new_coins}§a."
+#Available variables: ${added_coins} ${new_coins}
+your_coins_added: "${prefix} §6${added_coins} Coins §ahave been added to you. You now have §6${new_coins} Coins§a."
+#Available variables: ${player_name}, ${added_coins}, ${new_coins}
+coins_added: "${prefix} §aYou successfully added §6${added_coins} Coins §ato §b${player_name}§a. He/She now has §6${new_coins} Coins§a."
+#Available variables: ${removed_coins} ${new_coins}
+your_coins_removed: "${prefix} §6${removed_coins} Coins §chave been removed from you. You now have §6${new_coins} Coins§c."
+#Available variables: ${player_name}, ${removed_coins}, ${new_coins}
+coins_removed: "${prefix} §aYou successfully removed §6${removed_coins} Coins §afrom §b${player_name}§a. He/She now has §6${new_coins} Coins§a."
+
+#CommandSigns
+
+#Available variables: none
+commandsign_setup_cancelled: "${prefix} §cThe CommandSign-Setup was cancelled."
+#Available variables: none
+commandsign_setup_started: "${prefix} §aThe CommandSign-Setup was started successfully. Break a sign to register / unregister it."
+#Available variables: none
+not_a_sign: "${prefix} §cThis block is not a sign."
+#Available variables: none
+not_a_commandsign: "${prefix} §cThis is not a CommandSign."
+#Available variables: none
+commandsign_removed: "${prefix} §aCommandSign removed successfully."
+#Available variables: ${command}, ${x}, ${y}, ${z}
+commandsign_created: "${prefix} §aCommandSign with the command §e/${command} at §e${x}§7, §e${y}§7, §e${z}§a was created successfully."
+
+#Misc
+
+#Available variables: ${player_name}
+player_not_found: "${prefix} §cThe player §b${player_name} §cis not online."
+#Available variables: none
+not_a_player: "${prefix} §cThis needs to be ran as a player."
+#Available variables: ${command_usage}
+invalid_usage: "${prefix} §cInvalid usage. Right usage: ${command_usage}"
+#Available variables: ${needed_permission}
+no_permissions: "${prefix} §cYou don't have enough permissions. You need §e${needed_permission}"

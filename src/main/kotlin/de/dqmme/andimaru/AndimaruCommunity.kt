@@ -1,15 +1,9 @@
 package de.dqmme.andimaru
 
-import de.dqmme.andimaru.command.CoinsCommand
-import de.dqmme.andimaru.command.CommandSignCommand
-import de.dqmme.andimaru.command.CommunityCommand
-import de.dqmme.andimaru.command.GamemodeCommand
+import de.dqmme.andimaru.command.*
 import de.dqmme.andimaru.listener.*
 import de.dqmme.andimaru.manager.EntityManager
-import de.dqmme.andimaru.util.messageFile
-import de.dqmme.andimaru.util.reloadCoins
-import de.dqmme.andimaru.util.reloadCommandSigns
-import de.dqmme.andimaru.util.reloadMessages
+import de.dqmme.andimaru.util.*
 import net.axay.kspigot.main.KSpigot
 
 class AndimaruCommunity : KSpigot() {
@@ -17,7 +11,9 @@ class AndimaruCommunity : KSpigot() {
         saveFiles()
         reloadCoins()
         reloadCommandSigns()
+        reloadHomes()
         reloadMessages()
+        reloadPlayerData()
         registerCommands()
         registerListeners()
     }
@@ -36,6 +32,8 @@ class AndimaruCommunity : KSpigot() {
         CommandSignCommand()
         CommunityCommand()
         GamemodeCommand()
+        HomeCommand()
+        SetHomeCommand()
     }
 
     private fun registerListeners() {
@@ -43,6 +41,7 @@ class AndimaruCommunity : KSpigot() {
         onDeath()
         onJoin()
         onQuit()
+        onRespawn()
 
         val bedListener = BedListener()
         bedListener.onBedEnter()

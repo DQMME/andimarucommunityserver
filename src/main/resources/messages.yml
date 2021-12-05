@@ -63,6 +63,17 @@ your_gamemode_set: "${prefix} §aYour §eGamemode §awas set to §e${gamemode}§
 #Available variables: ${player_name}, ${gamemode}
 gamemode_set: "${prefix} §aYou successfully set the §eGamemode §aof §b${player_name} §ato §e${gamemode}§a."
 
+#Home
+
+#Available variables: ${home_number}, ${world}, ${x}, ${y}, ${z}
+home_set: "${prefix} §aYou successfully set your §e${home_number} §ahome to §e${world}§7, §e${x}§7, §e${y}§7, §e${z}§a."
+#Available variables: ${home_number}
+teleported_to_home: "${prefix} §aYou were successfully teleported to your §e${home_number} §ahome."
+#Available variables: none
+home_not_found: "${prefix} §cThis home was not found."
+#Available variables: none
+not_enough_home_slots: "${prefix} §cYou don't have enough home slots."
+
 #Misc
 
 #Available variables: ${player_name}

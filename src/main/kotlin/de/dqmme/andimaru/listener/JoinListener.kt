@@ -1,8 +1,6 @@
 package de.dqmme.andimaru.listener
 
-import de.dqmme.andimaru.util.addToScoreboard
-import de.dqmme.andimaru.util.message
-import de.dqmme.andimaru.util.rank
+import de.dqmme.andimaru.util.*
 import net.axay.kspigot.event.listen
 import net.kyori.adventure.text.Component
 import org.bukkit.event.player.PlayerJoinEvent
@@ -19,4 +17,8 @@ fun onJoin() = listen<PlayerJoinEvent> { event ->
     )
 
     player.addToScoreboard()
+
+    if(player.availableHomes() < 2 || player.availableHomes() > 5) {
+        player.setAvailableHomes(2)
+    }
 }

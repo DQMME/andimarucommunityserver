@@ -2,15 +2,19 @@ package de.dqmme.andimaru.command
 
 import de.dqmme.andimaru.util.message
 import net.axay.kspigot.extensions.server
+import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.GameMode
 import org.bukkit.command.CommandSender
 import org.bukkit.command.defaults.BukkitCommand
 import org.bukkit.entity.Player
 
 class GamemodeCommand : BukkitCommand("gamemode") {
+    private val server = KSpigotMainInstance.server
+
     init {
         aliases = listOf("gm")
         permission = "community.command.gamemode"
+        server.commandMap.register("gamemode", this)
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {

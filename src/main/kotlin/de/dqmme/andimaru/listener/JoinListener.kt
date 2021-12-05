@@ -16,9 +16,15 @@ fun onJoin() = listen<PlayerJoinEvent> { event ->
         )
     )
 
+    val spawn = spawnLocation()
+
+    if (spawn != null) {
+        player.teleportAsync(spawn)
+    }
+
     player.addToScoreboard()
 
-    if(player.availableHomes() < 2 || player.availableHomes() > 5) {
+    if (player.availableHomes() < 2 || player.availableHomes() > 5) {
         player.setAvailableHomes(2)
     }
 }

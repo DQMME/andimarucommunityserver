@@ -10,6 +10,7 @@ class AndimaruCommunity : KSpigot() {
     override fun startup() {
         saveFiles()
         reloadCoins()
+        reloadConfigFile()
         reloadCommandSigns()
         reloadHomes()
         reloadMessages()
@@ -33,7 +34,10 @@ class AndimaruCommunity : KSpigot() {
         CommunityCommand()
         GamemodeCommand()
         HomeCommand()
+        PayCommand()
         SetHomeCommand()
+        SetSpawnCommand()
+        SpawnCommand()
     }
 
     private fun registerListeners() {

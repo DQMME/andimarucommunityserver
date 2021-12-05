@@ -40,6 +40,12 @@ coins_added: "${prefix} §aYou successfully added §6${added_coins} Coins §ato 
 your_coins_removed: "${prefix} §6${removed_coins} Coins §chave been removed from you. You now have §6${new_coins} Coins§c."
 #Available variables: ${player_name}, ${removed_coins}, ${new_coins}
 coins_removed: "${prefix} §aYou successfully removed §6${removed_coins} Coins §afrom §b${player_name}§a. He/She now has §6${new_coins} Coins§a."
+#Available variables: none
+not_enough_coins: "${prefix} §cYou don't have enough coins for this."
+#Available variables: ${coins}, ${new_coins}, ${player_name}
+coins_sent: "${prefix} §aYou sent §6${coins} Coins §ato §b${player_name}§a. You now have §6${new_coins} Coins§a."
+#Available variables: ${coins}, ${new_coins}, ${player_name}
+coins_received: "${prefix} §aYou received §6${coins} Coins §afrom §b${player_name}§a. You now have §6${new_coins} Coins§a."
 
 #CommandSigns
 
@@ -73,6 +79,15 @@ teleported_to_home: "${prefix} §aYou were successfully teleported to your §e${
 home_not_found: "${prefix} §cThis home was not found."
 #Available variables: none
 not_enough_home_slots: "${prefix} §cYou don't have enough home slots."
+
+#Spawn
+
+#Available variables: none
+spawn_not_set: "${prefix} §cThe spawn wasn't set."
+#Available variables: none
+teleported_to_spawn: "${prefix} §aYou were successfully teleported to the spawn."
+#Available variables: ${world}, ${x}, ${y}, ${z}
+spawn_set: "${prefix} §aYou successfully set the §espawn §ato §e${world}§7, §e${x}§7, §e${y}§7, §e${z}§a."
 
 #Misc
 

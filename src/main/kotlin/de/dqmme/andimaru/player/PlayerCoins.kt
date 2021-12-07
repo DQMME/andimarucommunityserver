@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.entity.Player
 import java.io.File
 
-private val coinFile = File(KSpigotMainInstance.dataFolder, "coins.yml")
+private val coinFile = File(KSpigotMainInstance.dataFolder, "prices.yml")
 private lateinit var fileConfiguration: FileConfiguration
 
 fun Player.coins(): Double {
@@ -15,6 +15,7 @@ fun Player.coins(): Double {
 
 fun Player.setCoins(newCoins: Double) {
     fileConfiguration.set(uniqueId.toString(), newCoins)
+    savePlayerCoins()
 }
 
 fun Player.addCoins(coinsToAdd: Double) {

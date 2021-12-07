@@ -11,9 +11,9 @@ import org.bukkit.event.Listener
 class NPCManager : Listener {
     private val instance = KSpigotMainInstance
     private val npcPool = NPCPool.builder(instance)
-        .spawnDistance(60)
-        .actionDistance(30)
-        .tabListRemoveTicks(20)
+        .spawnDistance(100)
+        .actionDistance(40)
+        .tabListRemoveTicks(5)
         .build()
 
     private val registeredNPCs = arrayListOf<NPC>()

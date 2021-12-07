@@ -5,6 +5,7 @@ import de.dqmme.andimaru.listener.*
 import de.dqmme.andimaru.manager.EntityManager
 import de.dqmme.andimaru.manager.reloadBuyClaims
 import de.dqmme.andimaru.npc.NPCManager
+import de.dqmme.andimaru.npc.reloadNPCData
 import de.dqmme.andimaru.util.*
 import net.axay.kspigot.main.KSpigot
 
@@ -20,6 +21,8 @@ class AndimaruCommunity : KSpigot() {
         reloadPlayerData()
         registerCommands()
         registerListeners()
+
+        reloadNPCData()
         NPCManager().registerNPCs()
     }
 

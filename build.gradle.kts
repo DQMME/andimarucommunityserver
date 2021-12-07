@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.6.0"
+    id("com.github.johnrengelman.shadow") version "7.1.0"
 }
 
 group = "de.dqmme"
@@ -22,7 +23,10 @@ dependencies {
     implementation("net.axay:kspigot:1.17.4")
 
     // GriefPrevention dependency
-    implementation("com.github.TechFortress:GriefPrevention:16.17.1")
+    compileOnly("com.github.TechFortress:GriefPrevention:16.17.1")
+
+    //NPCLib dependency
+    implementation("com.github.juliarn:npc-lib:development-SNAPSHOT")
 }
 
 tasks {

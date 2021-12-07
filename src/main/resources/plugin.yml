@@ -4,6 +4,6 @@ authors:
   - DQMME
 main: de.dqmme.andimaru.AndimaruCommunity
 version: 1.0.0
-libraries:
-  - "net.axay:kspigot:1.17.4"
-depend: [ GriefPrevention ]
+depend:
+  - GriefPrevention
+  - ProtocolLib

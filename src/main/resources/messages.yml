@@ -59,6 +59,10 @@ not_enough_coins: "${prefix} §cYou don't have enough coins for this."
 coins_sent: "${prefix} §aYou sent §6${coins} Coins §ato §b${player_name}§a. You now have §6${new_coins} Coins§a."
 #Available variables: ${coins}, ${new_coins}, ${player_name}
 coins_received: "${prefix} §aYou received §6${coins} Coins §afrom §b${player_name}§a. You now have §6${new_coins} Coins§a."
+#Available variables: ${price}, ${new_coins}, ${item_name}
+item_bought: "${prefix} §aYou successfully bought §e${item_name} §afor §6${price} Coins§a. You now have §6${new_coins} Coins§a."
+#Available variables: ${price}, ${new_coins}, ${item_name}, ${amount}
+item_sold: "${prefix} §aYou successfully sold §e${amount} ${item_name} §afor §6${price} Coins§a. You now have §6${new_coins} Coins§a."
 
 #CommandSigns
 

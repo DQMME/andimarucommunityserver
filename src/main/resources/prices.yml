@@ -1,0 +1,95 @@
+##Buying Prices
+#Rare
+efficiency_6: 6000
+telekinesis_1: 3500
+auto_smelt_1: 10000
+
+#Claim Blocks
+one_claim_block: 1
+ten_claim_blocks: 10
+hundred_claim_blocks: 100
+
+#Home Slots
+third_home: 2000
+fourth_home: 4000
+fifth_home: 10000
+
+#Enchantments
+protection_1: 500
+durability_1: 700
+oxygen_1: 700
+blast_protection_1: 300
+projectile_protection_1: 300
+fire_protection_1: 300
+thorns_1: 1000
+water_affinity_1: 500
+depth_strider_1: 500
+feather_falling_1: 700
+frost_walker_1: 900
+efficiency_1: 500
+fortune_1: 3000
+silk_touch_1: 1500
+mending_1: 2500
+sharpness_1: 500
+punch_1: 400
+fire_aspect_1: 1000
+knockback_1: 300
+looting_1: 2500
+infinity_1: 1500
+power_1: 500
+quick_charge: 500
+flame_1: 1000
+multi_shot_1: 500
+piercing_1: 350
+luck_of_the_sea_1: 350
+lure_1: 300
+impaling_1: 300
+channeling_1: 400
+riptide_1: 500
+loyality_1: 550
+
+#Spawn Eggs
+pig_spawn_egg: 300
+cow_spawn_egg: 400
+salmon_spawn_egg: 50
+cod_spawn_egg: 50
+donkey_spawn_egg: 1000
+horse_spawn_egg: 2000
+mooshroom_cow_spawn_egg: 600
+dolphin_spawn_egg: 2000
+polar_bear_spawn_egg: 3000
+pufferfish_spawn_egg: 100
+tropical_fish_spawn_egg: 100
+turtle_spawn_egg: 500
+llama_spawn_egg: 900
+panda_spawn_egg: 3000
+wolf_spawn_egg: 300
+ocelot_spawn_egg: 500
+fox_spawn_egg: 3000
+parrot_spawn_egg: 2000
+rabbit_spawn_egg: 400
+
+#misc
+saddle: 50
+cooked_beef: 10
+carrot: 10
+potato: 20
+player_skull: 9000
+
+##Selling Prices
+#Ores
+iron_ingot: 3
+gold_ingot: 3.5
+diamond: 50
+emerald: 80
+
+#Food
+raw_porkchop: 1
+apple: 3
+golden_apple: 33
+baked_potato: 1
+
+#Rare
+wither_skull: 80
+wither_star: 260
+ender_dragon_head: 80

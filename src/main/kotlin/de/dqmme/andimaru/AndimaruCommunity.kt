@@ -1,9 +1,13 @@
 package de.dqmme.andimaru
 
 import de.dqmme.andimaru.command.*
+import de.dqmme.andimaru.enchantment.CustomEnchants
+import de.dqmme.andimaru.enchantment.CustomEnchantsListener
 import de.dqmme.andimaru.listener.*
 import de.dqmme.andimaru.manager.EntityManager
+import de.dqmme.andimaru.manager.priceFile
 import de.dqmme.andimaru.manager.reloadBuyClaims
+import de.dqmme.andimaru.manager.reloadPrices
 import de.dqmme.andimaru.npc.NPCManager
 import de.dqmme.andimaru.npc.reloadNPCData
 import de.dqmme.andimaru.util.*
@@ -12,6 +16,7 @@ import net.axay.kspigot.main.KSpigot
 class AndimaruCommunity : KSpigot() {
     override fun startup() {
         saveFiles()
+
         reloadBuyClaims()
         reloadCoins()
         reloadConfigFile()
@@ -19,7 +24,10 @@ class AndimaruCommunity : KSpigot() {
         reloadHomes()
         reloadMessages()
         reloadPlayerData()
+        reloadPrices()
+
         registerCommands()
+        registerEnchantments()
         registerListeners()
 
         reloadNPCData()
@@ -30,6 +38,10 @@ class AndimaruCommunity : KSpigot() {
     }
 
     private fun saveFiles() {
+        if (!priceFile.exists()) {
+            saveResource("prices.yml", false)
+        }
+
         if (!messageFile.exists()) {
             saveResource("messages.yml", false)
         }
@@ -42,11 +54,17 @@ class AndimaruCommunity : KSpigot() {
         CommunityCommand()
         GamemodeCommand()
         HomeCommand()
+        NPCCommand()
         PayCommand()
         SetHomeCommand()
         SetSpawnCommand()
         SpawnCommand()
         WorldManagerCommand()
+    }
+
+    private fun registerEnchantments() {
+        CustomEnchants.registerEnchantment(CustomEnchants.AUTO_SMELT)
+        CustomEnchants.registerEnchantment(CustomEnchants.TELEKINESIS)
     }
 
     private fun registerListeners() {
@@ -61,6 +79,7 @@ class AndimaruCommunity : KSpigot() {
         bedListener.onBedLeave()
 
         CommandSignListener()
+        CustomEnchantsListener()
         EntityManager()
     }
 }

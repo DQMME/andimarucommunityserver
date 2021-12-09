@@ -27,6 +27,12 @@ dependencies {
 
     //NPCLib dependency
     implementation("com.github.juliarn:npc-lib:development-SNAPSHOT")
+
+    //OkHttp dependency
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+
+    implementation("net.wesjd:anvilgui:1.5.3-SNAPSHOT")
+
 }
 
 tasks {

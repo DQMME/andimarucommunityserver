@@ -4,10 +4,7 @@ import de.dqmme.andimaru.command.*
 import de.dqmme.andimaru.enchantment.CustomEnchants
 import de.dqmme.andimaru.enchantment.CustomEnchantsListener
 import de.dqmme.andimaru.listener.*
-import de.dqmme.andimaru.manager.EntityManager
-import de.dqmme.andimaru.manager.priceFile
-import de.dqmme.andimaru.manager.reloadBuyClaims
-import de.dqmme.andimaru.manager.reloadPrices
+import de.dqmme.andimaru.manager.*
 import de.dqmme.andimaru.npc.NPCManager
 import de.dqmme.andimaru.npc.reloadNPCData
 import de.dqmme.andimaru.util.*
@@ -32,6 +29,8 @@ class AndimaruCommunity : KSpigot() {
 
         reloadNPCData()
         NPCManager().registerNPCs()
+
+        ClaimManager()
     }
 
     override fun shutdown() {

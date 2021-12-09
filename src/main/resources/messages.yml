@@ -117,6 +117,9 @@ world_removed: "${prefix} §aYou successfully removed the world §e${world_name}
 #Available variables: ${world_name}
 world_created: "${prefix} §aYou successfully created the world §e{world_name}§a."
 
+#Flying
+walked_on_claim: "${prefix} §aYou walked on a claim "
+
 #Misc
 
 #Available variables: ${player_name}

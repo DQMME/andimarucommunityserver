@@ -18,6 +18,20 @@ fun Player.setAvailableHomes(availableHomes: Int) {
     savePlayerDataFile()
 }
 
+fun Player.hasFlyingEnabled(): Boolean {
+    if (playerDataConfiguration.get("$uniqueId.flyingEnabled") == null) {
+        playerDataConfiguration.set("$uniqueId.flyingEnabled", true)
+        savePlayerDataFile()
+    }
+
+    return playerDataConfiguration.getBoolean("$uniqueId.flyingEnabled")
+}
+
+fun Player.setFlyingEnabled(flyingEnabled: Boolean) {
+    playerDataConfiguration.set("$uniqueId.flyingEnabled", flyingEnabled)
+    savePlayerDataFile()
+}
+
 fun reloadPlayerData() {
     playerDataConfiguration = YamlConfiguration.loadConfiguration(file)
     savePlayerDataFile()

@@ -6,11 +6,11 @@ import com.github.juliarn.npc.event.PlayerNPCShowEvent
 import com.github.juliarn.npc.modifier.MetadataModifier
 import com.github.juliarn.npc.profile.Profile
 import de.dqmme.andimaru.npc.impl.*
-import com.github.juliarn.npc.NPC as FinalNPC
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import java.util.*
+import com.github.juliarn.npc.NPC as FinalNPC
 
 class NPCManager : Listener {
     private val instance = KSpigotMainInstance
@@ -71,10 +71,10 @@ class NPCManager : Listener {
 
     @EventHandler
     fun onNPCInteract(event: PlayerNPCInteractEvent) {
-        if(event.useAction != PlayerNPCInteractEvent.EntityUseAction.INTERACT) return
+        if (event.useAction != PlayerNPCInteractEvent.EntityUseAction.INTERACT) return
 
-        for(npc in registeredNPCs) {
-            if(event.npc != npc.finalNPC) continue
+        for (npc in registeredNPCs) {
+            if (event.npc != npc.finalNPC) continue
 
             npc.onInteract(event)
         }
@@ -82,7 +82,7 @@ class NPCManager : Listener {
 
     @EventHandler
     fun onNPCShow(event: PlayerNPCShowEvent) {
-        for(npc in registeredNPCs) {
+        for (npc in registeredNPCs) {
             event.send(
                 npc.finalNPC!!.metadata()
                     .queue(MetadataModifier.EntityMetadata.SKIN_LAYERS, true)

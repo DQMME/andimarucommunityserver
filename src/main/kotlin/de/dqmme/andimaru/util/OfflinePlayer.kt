@@ -2,7 +2,6 @@ package de.dqmme.andimaru.util
 
 import com.google.gson.Gson
 import com.google.gson.JsonObject
-import de.dqmme.andimaru.listener.onDeath
 import net.axay.kspigot.main.KSpigotMainInstance
 import okhttp3.*
 import org.bukkit.OfflinePlayer

@@ -79,7 +79,12 @@ object CommonMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("salmon_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("salmon_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowThreeSlotFive, itemStack(Material.COD_SPAWN_EGG) {
@@ -107,7 +112,12 @@ object CommonMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("donkey_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("donkey_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowThreeSlotSeven, itemStack(Material.HORSE_SPAWN_EGG) {
@@ -121,7 +131,12 @@ object CommonMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("horse_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("horse_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowThreeSlotEight, itemStack(Material.MOOSHROOM_SPAWN_EGG) {
@@ -135,7 +150,12 @@ object CommonMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("mooshroom_cow_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("mooshroom_cow_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowTwoSlotTwo, itemStack(Material.MOOSHROOM_SPAWN_EGG) {
@@ -149,7 +169,12 @@ object CommonMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("mooshroom_cow_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("mooshroom_cow_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowTwoSlotThree, itemStack(Material.SADDLE) {

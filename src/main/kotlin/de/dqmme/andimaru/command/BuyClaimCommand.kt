@@ -137,11 +137,11 @@ class BuyClaimCommand : BukkitCommand("buyclaim") {
     }
 
     override fun tabComplete(sender: CommandSender, alias: String, args: Array<out String>): MutableList<String> {
-        if(!sender.hasPermission("community.command.buyclaim") || !sender.hasPermission("community.*")) {
+        if (!sender.hasPermission("community.command.buyclaim") || !sender.hasPermission("community.*")) {
             return mutableListOf()
         }
 
-        if(args.size == 1) {
+        if (args.size == 1) {
             return mutableListOf("create", "remove")
         }
 

@@ -65,7 +65,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("polar_bear_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("polar_bear_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowThreeSlotFour, itemStack(Material.PUFFERFISH_SPAWN_EGG) {
@@ -79,7 +84,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("pufferfish_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("pufferfish_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowThreeSlotFive, itemStack(Material.TROPICAL_FISH_SPAWN_EGG) {
@@ -93,7 +103,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("tropical_fish_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("tropical_fish_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowThreeSlotSix, itemStack(Material.TURTLE_SPAWN_EGG) {
@@ -107,7 +122,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("turtle_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("turtle_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowThreeSlotSeven, itemStack(Material.LLAMA_SPAWN_EGG) {
@@ -121,7 +141,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("llama_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("llama_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowThreeSlotEight, itemStack(Material.PANDA_SPAWN_EGG) {
@@ -135,7 +160,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("panda_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("panda_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowTwoSlotTwo, itemStack(Material.WOLF_SPAWN_EGG) {
@@ -149,7 +179,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("wolf_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("wolf_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowTwoSlotThree, itemStack(Material.OCELOT_SPAWN_EGG) {
@@ -163,7 +198,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("ocelot_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("ocelot_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowTwoSlotFour, itemStack(Material.FOX_SPAWN_EGG) {
@@ -191,7 +231,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("parrot_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("parrot_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowTwoSlotSix, itemStack(Material.RABBIT_SPAWN_EGG) {
@@ -205,7 +250,12 @@ object RareMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("rabbit_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("rabbit_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
                 }
             }

@@ -118,19 +118,19 @@ object RareEnchantmentsNPC : NPC() {
                             return@button
                         }
 
-                        if(!item.type.isTool()) {
+                        if (!item.type.isTool()) {
                             it.bukkitEvent.isCancelled = true
                             return@button
                         }
 
-                        if(item.itemMeta.hasEnchant(Enchantment.DIG_SPEED, 6)) {
+                        if (item.itemMeta.hasEnchant(Enchantment.DIG_SPEED, 6)) {
                             it.bukkitEvent.isCancelled = true
                             return@button
                         }
 
                         val newItem = itemStack(item.type) {
                             meta {
-                                for(enchantment in item.enchantments) {
+                                for (enchantment in item.enchantments) {
                                     addEnchant(enchantment.key, enchantment.value, true)
                                 }
 
@@ -138,13 +138,13 @@ object RareEnchantmentsNPC : NPC() {
 
                                 val oldDisplayName = item.displayName().textValueNullable()
 
-                                if(oldDisplayName != null) {
+                                if (oldDisplayName != null) {
                                     displayName(Component.text(oldDisplayName))
                                 }
 
                                 val lore = mutableListOf<Component>()
 
-                                if(item.lore() != null) {
+                                if (item.lore() != null) {
                                     item.lore()!!.forEach { component ->
                                         lore.add(component)
                                     }
@@ -191,19 +191,19 @@ object RareEnchantmentsNPC : NPC() {
                             return@button
                         }
 
-                        if(!item.type.isTool()) {
+                        if (!item.type.isTool()) {
                             it.bukkitEvent.isCancelled = true
                             return@button
                         }
 
-                        if(item.itemMeta.hasEnchant(CustomEnchants.TELEKINESIS)) {
+                        if (item.itemMeta.hasEnchant(CustomEnchants.TELEKINESIS)) {
                             it.bukkitEvent.isCancelled = true
                             return@button
                         }
 
                         val newItem = itemStack(item.type) {
                             meta {
-                                for(enchantment in item.enchantments) {
+                                for (enchantment in item.enchantments) {
                                     addEnchant(enchantment.key, enchantment.value, true)
                                 }
 
@@ -211,7 +211,7 @@ object RareEnchantmentsNPC : NPC() {
 
                                 val oldDisplayName = item.displayName().textValueNullable()
 
-                                if(oldDisplayName != null) {
+                                if (oldDisplayName != null) {
                                     displayName(Component.text(oldDisplayName))
                                 }
 
@@ -219,7 +219,7 @@ object RareEnchantmentsNPC : NPC() {
 
                                 lore.add(Component.text("§7Telekinesis I"))
 
-                                if(item.lore() != null) {
+                                if (item.lore() != null) {
                                     item.lore()!!.forEach { component ->
                                         lore.add(component)
                                     }
@@ -266,19 +266,19 @@ object RareEnchantmentsNPC : NPC() {
                             return@button
                         }
 
-                        if(!item.type.isTool()) {
+                        if (!item.type.isTool()) {
                             it.bukkitEvent.isCancelled = true
                             return@button
                         }
 
-                        if(item.itemMeta.hasEnchant(CustomEnchants.AUTO_SMELT)) {
+                        if (item.itemMeta.hasEnchant(CustomEnchants.AUTO_SMELT)) {
                             it.bukkitEvent.isCancelled = true
                             return@button
                         }
 
                         val newItem = itemStack(item.type) {
                             meta {
-                                for(enchantment in item.enchantments) {
+                                for (enchantment in item.enchantments) {
                                     addEnchant(enchantment.key, enchantment.value, true)
                                 }
 
@@ -286,7 +286,7 @@ object RareEnchantmentsNPC : NPC() {
 
                                 val oldDisplayName = item.displayName().textValueNullable()
 
-                                if(oldDisplayName != null) {
+                                if (oldDisplayName != null) {
                                     displayName(Component.text(oldDisplayName))
                                 }
 
@@ -294,7 +294,7 @@ object RareEnchantmentsNPC : NPC() {
 
                                 lore.add(Component.text("§7Auto-Smelt I"))
 
-                                if(item.lore() != null) {
+                                if (item.lore() != null) {
                                     item.lore()!!.forEach { component ->
                                         lore.add(component)
                                     }

@@ -25,7 +25,8 @@ object ClaimNPC0 : NPC() {
     private val data = npcData(id)
 
     override val displayName: String = data.displayName ?: "§cName not set"
-    override val location: Location = data.location ?: KSpigotMainInstance.server.worlds[0].spawnLocation.add(2.0, 0.0, 0.0)
+    override val location: Location =
+        data.location ?: KSpigotMainInstance.server.worlds[0].spawnLocation.add(2.0, 0.0, 0.0)
     override val imitatePlayer: Boolean = data.imitatePlayer
     override val lookAtPlayer: Boolean = data.lookAtPlayer
     override val isTeleportNPC: Boolean = false

@@ -17,7 +17,7 @@ class CustomEnchantsListener {
         val drops = event.block.drops
 
         if (itemInMainHand.itemMeta.hasEnchant(CustomEnchants.AUTO_SMELT)) {
-            when(event.block.type) {
+            when (event.block.type) {
                 Material.RAW_IRON_BLOCK, Material.DEEPSLATE_IRON_ORE, Material.IRON_ORE -> {
                     drops.clear()
                     drops.add(ItemStack(Material.IRON_INGOT))

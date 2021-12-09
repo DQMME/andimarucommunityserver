@@ -10,13 +10,14 @@ import net.kyori.adventure.title.Title
 import org.bukkit.Location
 import org.bukkit.Sound
 
-object MiddleAgeNPC: NPC() {
+object MiddleAgeNPC : NPC() {
     override val id: String = "middle_age_npc"
 
     private val data = teleportNPCData(id)
 
     override val displayName: String = data.displayName ?: "§cName not set"
-    override val location: Location = data.location ?: KSpigotMainInstance.server.worlds[0].spawnLocation.add(14.0, 0.0, 0.0)
+    override val location: Location =
+        data.location ?: KSpigotMainInstance.server.worlds[0].spawnLocation.add(14.0, 0.0, 0.0)
     override val imitatePlayer: Boolean = data.imitatePlayer
     override val lookAtPlayer: Boolean = data.lookAtPlayer
     override val isTeleportNPC: Boolean = true

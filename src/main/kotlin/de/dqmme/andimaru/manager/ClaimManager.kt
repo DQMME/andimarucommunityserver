@@ -4,6 +4,7 @@ import de.dqmme.andimaru.util.hasFlyingEnabled
 import me.ryanhamshire.GriefPrevention.GriefPrevention
 import net.axay.kspigot.main.KSpigotMainInstance
 import net.axay.kspigot.runnables.task
+import org.bukkit.GameMode
 
 class ClaimManager {
     init {
@@ -12,6 +13,8 @@ class ClaimManager {
 
     private fun check() = task(true, 0, 20) {
         for (player in KSpigotMainInstance.server.onlinePlayers) {
+            if(player.gameMode != GameMode.SURVIVAL) continue
+
             if (!player.hasFlyingEnabled()) continue
 
             val claim = GriefPrevention.instance.dataStore.getClaimAt(player.location, true, null)

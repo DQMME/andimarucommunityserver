@@ -19,12 +19,12 @@ class ClaimManager {
 
             val claim = GriefPrevention.instance.dataStore.getClaimAt(player.location, true, null)
 
-            if(!claim.managers.contains(player.uniqueId.toString()) && claim.ownerID != player.uniqueId) continue
-
             if (claim == null) {
                 player.allowFlight = false
                 player.isFlying = false
             } else {
+                if(!claim.managers.contains(player.uniqueId.toString()) && claim.ownerID != player.uniqueId) continue
+
                 player.allowFlight = true
                 player.isFlying = true
             }

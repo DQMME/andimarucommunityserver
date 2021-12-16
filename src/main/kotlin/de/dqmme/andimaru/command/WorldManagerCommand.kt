@@ -15,6 +15,7 @@ class WorldManagerCommand : BukkitCommand("worldmanager") {
     private val server = KSpigotMainInstance.server
 
     init {
+        aliases = listOf("wm")
         permission = "community.command.worldmanager"
         server.commandMap.register("worldmanager", this)
     }
@@ -33,7 +34,7 @@ class WorldManagerCommand : BukkitCommand("worldmanager") {
                 message("invalid_usage")
                     .replace(
                         "\${command_usage}",
-                        "/worldmanager <create/remove/teleport> <worldname> <normal/end/nether/flat>"
+                        "/worldmanager <create/remove/teleport/load> <worldname> <normal/end/nether/flat>"
                     )
             )
             return false
@@ -129,8 +130,76 @@ class WorldManagerCommand : BukkitCommand("worldmanager") {
                         .replace("\${world_name}", worldName)
                 )
             }
+
+            "load" -> {
+                if (args.size != 2) {
+                    sender.sendMessage(
+                        message("invalid_usage")
+                            .replace("\${command_usage}", "/worldmanager load <worldname>")
+                    )
+                }
+
+                val worldName = WorldCreator(args[1]).createWorld()?.name ?: return false
+
+                sender.sendMessage(
+                    message("world_loaded")
+                        .replace("\${world_name}", worldName)
+                )
+            }
+
+            else -> {
+                sender.sendMessage(
+                    message("invalid_usage")
+                        .replace(
+                            "\${command_usage}",
+                            "/worldmanager <create/remove/teleport/load> <worldname> <normal/end/nether/flat>"
+                        )
+                )
+            }
         }
 
         return true
+    }
+
+    override fun tabComplete(sender: CommandSender, alias: String, args: Array<out String>): MutableList<String> {
+        if (args.size == 1) {
+            return mutableListOf("create", "delete", "remove", "teleport", "tp", "load")
+        }
+
+        if (args.size == 2) {
+            val worlds = server.worlds
+            val worldNames = mutableListOf<String>()
+
+            for (world in worlds) {
+                worldNames.add(world.name)
+            }
+
+            return when (args[0].lowercase()) {
+                "delete", "remove", "teleport", "tp" -> {
+                    println(worldNames)
+                    worldNames
+                }
+
+                else -> {
+                    mutableListOf()
+                }
+            }
+        }
+
+        if (args.size == 3) {
+            return when (args[0].lowercase()) {
+                "create" -> {
+                    println("create")
+                    mutableListOf("normal", "end", "nether", "flat")
+                }
+
+                else -> {
+                    println("else")
+                    mutableListOf()
+                }
+            }
+        }
+
+        return mutableListOf()
     }
 }

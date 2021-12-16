@@ -115,7 +115,9 @@ teleported_to_world: "${prefix} §aYou was successfully teleported to the world 
 #Available variables: ${world_name}
 world_removed: "${prefix} §aYou successfully removed the world §e${world_name}§a."
 #Available variables: ${world_name}
-world_created: "${prefix} §aYou successfully created the world §e{world_name}§a."
+world_created: "${prefix} §aYou successfully created the world §e${world_name}§a."
+#Available variables: ${world_name}
+world_loaded: "${prefix} §aYou successfully loaded the world §e${world_name}§a."
 
 #Flying
 walked_on_claim: "${prefix} §aYou walked on a claim "

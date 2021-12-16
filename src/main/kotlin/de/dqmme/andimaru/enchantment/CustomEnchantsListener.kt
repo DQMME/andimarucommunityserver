@@ -14,6 +14,8 @@ class CustomEnchantsListener {
         val player = event.player
         val itemInMainHand = player.inventory.itemInMainHand
 
+        if(itemInMainHand.itemMeta == null) return@listen
+
         val drops = event.block.drops
 
         if (itemInMainHand.itemMeta.hasEnchant(CustomEnchants.AUTO_SMELT)) {

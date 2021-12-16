@@ -2,7 +2,7 @@ package de.dqmme.andimaru.command
 
 import de.dqmme.andimaru.npc.*
 import de.dqmme.andimaru.util.blackGlassItem
-import de.dqmme.andimaru.util.message
+import de.dqmme.andimaru.manager.message
 import de.dqmme.andimaru.util.textValue
 import net.axay.kspigot.gui.*
 import net.axay.kspigot.items.itemStack

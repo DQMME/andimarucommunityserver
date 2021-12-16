@@ -1,4 +1,4 @@
-package de.dqmme.andimaru.util
+package de.dqmme.andimaru.manager
 
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.Location
@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration
 import org.bukkit.configuration.file.YamlConfiguration
 import java.io.File
 
-private val configFile = File(KSpigotMainInstance.dataFolder, "config.yml")
+val configFile = File(KSpigotMainInstance.dataFolder, "config.yml")
 private lateinit var fileConfiguration: FileConfiguration
 
 fun spawnLocation(): Location? {
@@ -16,6 +16,14 @@ fun spawnLocation(): Location? {
 fun setSpawnLocation(location: Location) {
     fileConfiguration.set("spawn", location)
     saveConfigFile()
+}
+
+fun tablistHeader(): String? {
+    return fileConfiguration.getString("tablist_header")
+}
+
+fun tablistFooter(): String? {
+    return fileConfiguration.getString("tablist_footer")
 }
 
 fun reloadConfigFile() {

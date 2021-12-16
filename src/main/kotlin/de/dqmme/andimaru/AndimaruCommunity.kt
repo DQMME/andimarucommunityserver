@@ -31,12 +31,18 @@ class AndimaruCommunity : KSpigot() {
         NPCManager().registerNPCs()
 
         ClaimManager()
+
+        refreshPlayerTablist()
     }
 
     override fun shutdown() {
     }
 
     private fun saveFiles() {
+        if(!configFile.exists()) {
+            saveResource("config.yml", false)
+        }
+
         if (!priceFile.exists()) {
             saveResource("prices.yml", false)
         }

@@ -1,7 +1,10 @@
 package de.dqmme.andimaru.util
 
 import de.dqmme.andimaru.enums.Rank
+import de.dqmme.andimaru.manager.tablistFooter
+import de.dqmme.andimaru.manager.tablistHeader
 import net.axay.kspigot.main.KSpigotMainInstance
+import net.axay.kspigot.runnables.task
 import net.kyori.adventure.text.Component
 import org.bukkit.Statistic
 import org.bukkit.entity.Player
@@ -22,6 +25,10 @@ fun Player.rank(): Rank {
 
 fun Player.deaths(): Int {
     return getStatistic(Statistic.DEATHS)
+}
+
+fun Player.playtimeSeconds(): Int{
+    return getStatistic(Statistic.PLAY_ONE_MINUTE) / 20
 }
 
 fun Player.addToScoreboard(deaths: Int) {
@@ -66,4 +73,36 @@ fun Player.removeFromScoreboard() {
         team.removeEntry(name)
         team.unregister()
     }
+}
+
+fun Player.setPlayerListHeaderFooter() {
+    val playtime = formatPlaytime(playtimeSeconds())
+    val header = tablistHeader()?.replace("\${player_playtime}", playtime)
+    val footer = tablistFooter()?.replace("\${player_playtime}", playtime)
+
+    if(header != null) {
+        sendPlayerListHeader(Component.text(header))
+    }
+
+    if(footer != null) {
+        sendPlayerListFooter(Component.text(footer))
+    }
+}
+
+fun refreshPlayerTablist() = task(true, 0, 10*20) {
+    for(player in KSpigotMainInstance.server.onlinePlayers) {
+        player.setPlayerListHeaderFooter()
+    }
+}
+
+private fun formatPlaytime(seconds: Int): String {
+    if(seconds < 60) {
+        return "$seconds Sekunden"
+    }
+
+    if(seconds < 3600) {
+        return "${seconds / 60} Minuten"
+    }
+
+    return "${seconds / 60 / 60} Stunden"
 }

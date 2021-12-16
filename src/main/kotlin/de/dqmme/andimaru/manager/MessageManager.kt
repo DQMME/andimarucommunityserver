@@ -1,4 +1,4 @@
-package de.dqmme.andimaru.util
+package de.dqmme.andimaru.manager
 
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.ChatColor

@@ -1,4 +1,4 @@
-package de.dqmme.andimaru.util
+package de.dqmme.andimaru.manager
 
 import de.dqmme.andimaru.dataclass.CommandSign
 import net.axay.kspigot.main.KSpigotMainInstance

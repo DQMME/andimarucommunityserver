@@ -2,7 +2,7 @@ package de.dqmme.andimaru.command
 
 import de.dqmme.andimaru.util.home
 import de.dqmme.andimaru.util.homeGUI
-import de.dqmme.andimaru.util.message
+import de.dqmme.andimaru.manager.message
 import net.axay.kspigot.gui.openGUI
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.command.CommandSender

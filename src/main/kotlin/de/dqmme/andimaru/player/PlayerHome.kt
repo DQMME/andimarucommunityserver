@@ -1,6 +1,7 @@
 package de.dqmme.andimaru.util
 
 import de.dqmme.andimaru.dataclass.Home
+import de.dqmme.andimaru.manager.message
 import net.axay.kspigot.gui.GUIType
 import net.axay.kspigot.gui.Slots
 import net.axay.kspigot.gui.kSpigotGUI

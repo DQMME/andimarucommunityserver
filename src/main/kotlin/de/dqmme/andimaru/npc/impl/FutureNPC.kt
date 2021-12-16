@@ -3,7 +3,7 @@ package de.dqmme.andimaru.npc.impl
 import com.github.juliarn.npc.event.PlayerNPCInteractEvent
 import de.dqmme.andimaru.npc.NPC
 import de.dqmme.andimaru.npc.teleportNPCData
-import de.dqmme.andimaru.util.spawnLocation
+import de.dqmme.andimaru.manager.spawnLocation
 import net.axay.kspigot.main.KSpigotMainInstance
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.title.Title

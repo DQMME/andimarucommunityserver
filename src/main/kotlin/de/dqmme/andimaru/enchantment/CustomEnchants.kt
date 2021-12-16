@@ -1,6 +1,6 @@
 package de.dqmme.andimaru.enchantment
 
-import de.dqmme.andimaru.util.message
+import de.dqmme.andimaru.manager.message
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.enchantments.EnchantmentTarget
 import java.lang.reflect.Field

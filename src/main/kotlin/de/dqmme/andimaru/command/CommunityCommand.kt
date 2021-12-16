@@ -1,9 +1,9 @@
 package de.dqmme.andimaru.command
 
-import de.dqmme.andimaru.util.message
+import de.dqmme.andimaru.manager.message
 import de.dqmme.andimaru.util.reloadCoins
-import de.dqmme.andimaru.util.reloadCommandSigns
-import de.dqmme.andimaru.util.reloadMessages
+import de.dqmme.andimaru.manager.reloadCommandSigns
+import de.dqmme.andimaru.manager.reloadMessages
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.command.CommandSender
 import org.bukkit.command.defaults.BukkitCommand

@@ -4,7 +4,7 @@ import de.dqmme.andimaru.manager.buyClaimFromClaim
 import de.dqmme.andimaru.manager.registerBuyClaim
 import de.dqmme.andimaru.manager.removeBuyClaim
 import de.dqmme.andimaru.util.coins
-import de.dqmme.andimaru.util.message
+import de.dqmme.andimaru.manager.message
 import de.dqmme.andimaru.util.removeCoins
 import de.dqmme.andimaru.util.replace
 import me.ryanhamshire.GriefPrevention.GriefPrevention

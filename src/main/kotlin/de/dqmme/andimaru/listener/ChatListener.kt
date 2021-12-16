@@ -2,7 +2,7 @@
 
 package de.dqmme.andimaru.listener
 
-import de.dqmme.andimaru.util.message
+import de.dqmme.andimaru.manager.message
 import de.dqmme.andimaru.util.rank
 import net.axay.kspigot.event.listen
 import org.bukkit.event.player.AsyncPlayerChatEvent

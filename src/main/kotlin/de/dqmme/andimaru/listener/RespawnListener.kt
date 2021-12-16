@@ -1,7 +1,7 @@
 package de.dqmme.andimaru.listener
 
 import de.dqmme.andimaru.util.home
-import de.dqmme.andimaru.util.spawnLocation
+import de.dqmme.andimaru.manager.spawnLocation
 import net.axay.kspigot.event.listen
 import org.bukkit.event.player.PlayerRespawnEvent
 

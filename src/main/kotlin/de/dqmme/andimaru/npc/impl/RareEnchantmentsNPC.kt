@@ -2,6 +2,7 @@ package de.dqmme.andimaru.npc.impl
 
 import com.github.juliarn.npc.event.PlayerNPCInteractEvent
 import de.dqmme.andimaru.enchantment.CustomEnchants
+import de.dqmme.andimaru.manager.message
 import de.dqmme.andimaru.manager.price
 import de.dqmme.andimaru.npc.NPC
 import de.dqmme.andimaru.npc.npcData

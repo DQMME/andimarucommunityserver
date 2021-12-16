@@ -1,0 +1,4 @@
+#Available variables: ${player_playtime}
+tablist_header: "${player_playtime}"
+#Available variables: ${player_playtime}
+tablist_footer: "${player_playtime}"

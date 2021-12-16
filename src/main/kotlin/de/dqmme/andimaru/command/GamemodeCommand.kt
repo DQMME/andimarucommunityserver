@@ -1,6 +1,6 @@
 package de.dqmme.andimaru.command
 
-import de.dqmme.andimaru.util.message
+import de.dqmme.andimaru.manager.message
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.GameMode
 import org.bukkit.command.CommandSender

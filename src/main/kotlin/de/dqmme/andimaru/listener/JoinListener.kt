@@ -1,5 +1,7 @@
 package de.dqmme.andimaru.listener
 
+import de.dqmme.andimaru.manager.message
+import de.dqmme.andimaru.manager.spawnLocation
 import de.dqmme.andimaru.util.*
 import net.axay.kspigot.event.listen
 import net.kyori.adventure.text.Component
@@ -23,6 +25,7 @@ fun onJoin() = listen<PlayerJoinEvent> { event ->
     }
 
     player.addToScoreboard()
+    player.setPlayerListHeaderFooter()
 
     if (player.availableHomes() < 2 || player.availableHomes() > 5) {
         player.setAvailableHomes(2)

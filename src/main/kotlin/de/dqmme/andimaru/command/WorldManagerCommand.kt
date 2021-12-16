@@ -176,7 +176,6 @@ class WorldManagerCommand : BukkitCommand("worldmanager") {
 
             return when (args[0].lowercase()) {
                 "delete", "remove", "teleport", "tp" -> {
-                    println(worldNames)
                     worldNames
                 }
 
@@ -189,12 +188,10 @@ class WorldManagerCommand : BukkitCommand("worldmanager") {
         if (args.size == 3) {
             return when (args[0].lowercase()) {
                 "create" -> {
-                    println("create")
                     mutableListOf("normal", "end", "nether", "flat")
                 }
 
                 else -> {
-                    println("else")
                     mutableListOf()
                 }
             }

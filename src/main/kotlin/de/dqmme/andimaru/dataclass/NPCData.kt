@@ -6,5 +6,6 @@ data class NPCData(
     var displayName: String?,
     var location: Location?,
     var imitatePlayer: Boolean = true,
-    var lookAtPlayer: Boolean = true
+    var lookAtPlayer: Boolean = true,
+    var skin: Skin
 )

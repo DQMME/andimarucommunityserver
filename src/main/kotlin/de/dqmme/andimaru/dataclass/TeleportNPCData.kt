@@ -8,5 +8,6 @@ data class TeleportNPCData(
     var imitatePlayer: Boolean = true,
     var lookAtPlayer: Boolean = true,
     var teleportLocation: Location?,
-    var title: String?
+    var title: String?,
+    var skin: Skin
 )

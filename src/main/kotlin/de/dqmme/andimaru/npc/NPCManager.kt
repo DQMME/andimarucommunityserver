@@ -5,8 +5,10 @@ import com.github.juliarn.npc.event.PlayerNPCInteractEvent
 import com.github.juliarn.npc.event.PlayerNPCShowEvent
 import com.github.juliarn.npc.modifier.MetadataModifier
 import com.github.juliarn.npc.profile.Profile
+import de.dqmme.andimaru.dataclass.Skin
 import de.dqmme.andimaru.npc.impl.*
 import net.axay.kspigot.main.KSpigotMainInstance
+import org.bukkit.ChatColor
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import java.util.*
@@ -44,7 +46,7 @@ class NPCManager : Listener {
         )
 
         for (npc in npcsToRegister) {
-            val profile = createProfile(npc.displayName)
+            val profile = createProfile(npc.displayName, npcData(npc.id).skin)
 
             val finalNPC = FinalNPC.builder()
                 .profile(profile)
@@ -59,10 +61,17 @@ class NPCManager : Listener {
         }
     }
 
-    private fun createProfile(displayName: String): Profile {
-        val profile = Profile(displayName)
+    private fun createProfile(displayName: String, skin: Skin): Profile {
+        val profile = Profile(ChatColor.translateAlternateColorCodes('&', displayName))
 
         profile.uniqueId = UUID.randomUUID()
+
+        profile.setProperty(
+            Profile.Property(
+                "textures", skin.value,
+                skin.signature
+            )
+        )
 
         profile.complete()
 

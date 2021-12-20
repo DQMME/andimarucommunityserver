@@ -1,6 +1,7 @@
 package de.dqmme.andimaru.npc
 
 import de.dqmme.andimaru.dataclass.NPCData
+import de.dqmme.andimaru.dataclass.Skin
 import de.dqmme.andimaru.dataclass.TeleportNPCData
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.configuration.file.FileConfiguration
@@ -15,8 +16,10 @@ fun npcData(id: String): NPCData {
     val location = fileConfiguration.getLocation("$id.location")
     val imitatePlayer = fileConfiguration.getBoolean("$id.imitate_player")
     val lookAtPlayer = fileConfiguration.getBoolean("$id.look_at_player")
+    val skinSignature = fileConfiguration.getString("$id.skin_signature") ?: ""
+    val skinValue = fileConfiguration.getString("$id.skin_value") ?: ""
 
-    return NPCData(displayName, location, imitatePlayer, lookAtPlayer)
+    return NPCData(displayName, location, imitatePlayer, lookAtPlayer, Skin(skinSignature, skinValue))
 }
 
 fun setNPCData(id: String, npcData: NPCData) {
@@ -24,6 +27,8 @@ fun setNPCData(id: String, npcData: NPCData) {
     fileConfiguration.set("$id.location", npcData.location)
     fileConfiguration.set("$id.imitate_player", npcData.imitatePlayer)
     fileConfiguration.set("$id.look_at_player", npcData.lookAtPlayer)
+    fileConfiguration.set("$id.skin_signature", npcData.skin.signature)
+    fileConfiguration.set("$id.skin_value", npcData.skin.value)
     saveNPCDataFile()
 }
 
@@ -34,8 +39,10 @@ fun teleportNPCData(id: String): TeleportNPCData {
     val lookAtPlayer = fileConfiguration.getBoolean("$id.look_at_player")
     val teleportLocation = fileConfiguration.getLocation("$id.teleport_location")
     val title = fileConfiguration.getString("$id.title")
+    val skinSignature = fileConfiguration.getString("$id.skin_signature") ?: ""
+    val skinValue = fileConfiguration.getString("$id.skin_value") ?: ""
 
-    return TeleportNPCData(displayName, location, imitatePlayer, lookAtPlayer, teleportLocation, title)
+    return TeleportNPCData(displayName, location, imitatePlayer, lookAtPlayer, teleportLocation, title, Skin(skinSignature, skinValue))
 }
 
 fun setTeleportNPCData(id: String, teleportNPCData: TeleportNPCData) {
@@ -45,6 +52,8 @@ fun setTeleportNPCData(id: String, teleportNPCData: TeleportNPCData) {
     fileConfiguration.set("$id.look_at_player", teleportNPCData.lookAtPlayer)
     fileConfiguration.set("$id.teleport_location", teleportNPCData.teleportLocation)
     fileConfiguration.set("$id.title", teleportNPCData.title)
+    fileConfiguration.set("$id.skin_signature", teleportNPCData.skin.signature)
+    fileConfiguration.set("$id.skin_value", teleportNPCData.skin.value)
     saveNPCDataFile()
 }
 

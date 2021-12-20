@@ -1,5 +1,6 @@
 package de.dqmme.andimaru.command
 
+import de.dqmme.andimaru.api.fetchSkin
 import de.dqmme.andimaru.npc.*
 import de.dqmme.andimaru.util.blackGlassItem
 import de.dqmme.andimaru.manager.message
@@ -187,7 +188,7 @@ class NPCCommand : BukkitCommand("npc") {
                                                     event.player.closeInventory()
                                                 }
 
-                                                button(Slots.RowTwoSlotSix, itemStack(Material.DIRT) {
+                                                button(Slots.RowTwoSlotSeven, itemStack(Material.DIRT) {
                                                     meta {
                                                         displayName(Component.text("§aTeleport Location"))
 
@@ -210,7 +211,7 @@ class NPCCommand : BukkitCommand("npc") {
                                                     event.player.closeInventory()
                                                 }
 
-                                                button(Slots.RowTwoSlotSix, itemStack(Material.NAME_TAG) {
+                                                button(Slots.RowTwoSlotEight, itemStack(Material.NAME_TAG) {
                                                     meta {
                                                         displayName(Component.text("§aTitle"))
 
@@ -246,6 +247,48 @@ class NPCCommand : BukkitCommand("npc") {
                                                             }
                                                         )
                                                         .title("§aTitle")
+                                                        .plugin(KSpigotMainInstance)
+                                                        .open(sender)
+                                                }
+
+                                                button(Slots.RowTwoSlotNine, itemStack(Material.CREEPER_HEAD) {
+                                                    meta {
+                                                        displayName(Component.text("§aSkin"))
+
+                                                        setLore {
+                                                            +"§aSet the Skin"
+                                                        }
+                                                    }
+                                                }) { event ->
+                                                    AnvilGUI.Builder()
+                                                        .onClose { obj: Player -> obj.closeInventory() }
+                                                        .onComplete { player, text ->
+                                                            fetchSkin(text) {
+                                                                if (it == null) {
+                                                                    event.player.closeInventory()
+                                                                    return@fetchSkin
+                                                                }
+
+                                                                val data = npcData(npc.id)
+
+                                                                data.skin = it
+
+                                                                setNPCData(npc.id, data)
+                                                            }
+
+                                                            AnvilGUI.Response.close()
+                                                        }
+                                                        .text("Skin-ID")
+                                                        .itemLeft(
+                                                            itemStack(Material.PAPER) {
+                                                                meta {
+                                                                    setLore {
+                                                                        +"§aSet the Skin"
+                                                                    }
+                                                                }
+                                                            }
+                                                        )
+                                                        .title("§aSkin-ID")
                                                         .plugin(KSpigotMainInstance)
                                                         .open(sender)
                                                 }
@@ -353,6 +396,48 @@ class NPCCommand : BukkitCommand("npc") {
                                                     setNPCData(npc.id, data)
 
                                                     event.player.closeInventory()
+                                                }
+
+                                                button(Slots.RowTwoSlotNine, itemStack(Material.CREEPER_HEAD) {
+                                                    meta {
+                                                        displayName(Component.text("§aSkin"))
+
+                                                        setLore {
+                                                            +"§aSet the Skin"
+                                                        }
+                                                    }
+                                                }) { event ->
+                                                    AnvilGUI.Builder()
+                                                        .onClose { obj: Player -> obj.closeInventory() }
+                                                        .onComplete { player, text ->
+                                                            fetchSkin(text) {
+                                                                if (it == null) {
+                                                                    event.player.closeInventory()
+                                                                    return@fetchSkin
+                                                                }
+
+                                                                val data = npcData(npc.id)
+
+                                                                data.skin = it
+
+                                                                setNPCData(npc.id, data)
+                                                            }
+
+                                                            AnvilGUI.Response.close()
+                                                        }
+                                                        .text("Skin-ID")
+                                                        .itemLeft(
+                                                            itemStack(Material.PAPER) {
+                                                                meta {
+                                                                    setLore {
+                                                                        +"§aSet the Skin"
+                                                                    }
+                                                                }
+                                                            }
+                                                        )
+                                                        .title("§aSkin-ID")
+                                                        .plugin(KSpigotMainInstance)
+                                                        .open(sender)
                                                 }
                                             }
                                         }

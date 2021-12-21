@@ -33,6 +33,7 @@ class AndimaruCommunity : KSpigot() {
         ClaimManager()
 
         refreshPlayerTablist()
+        sendPlayerCoins()
     }
 
     override fun shutdown() {

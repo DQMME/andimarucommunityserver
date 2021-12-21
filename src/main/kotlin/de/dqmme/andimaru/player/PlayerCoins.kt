@@ -1,6 +1,8 @@
 package de.dqmme.andimaru.util
 
 import net.axay.kspigot.main.KSpigotMainInstance
+import net.axay.kspigot.runnables.task
+import net.kyori.adventure.text.Component
 import org.bukkit.configuration.file.FileConfiguration
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.entity.Player
@@ -28,6 +30,12 @@ fun Player.removeCoins(coinsToRemove: Double) {
     if (newCoins < 0) newCoins = 0.0
 
     setCoins(newCoins)
+}
+
+fun sendPlayerCoins() = task(true, 0, 20) {
+    for(player in KSpigotMainInstance.server.onlinePlayers) {
+        player.sendActionBar(Component.text("${player.coins()} Coins"))
+    }
 }
 
 fun reloadCoins() {

@@ -34,7 +34,7 @@ fun Player.removeCoins(coinsToRemove: Double) {
 
 fun sendPlayerCoins() = task(true, 0, 20) {
     for(player in KSpigotMainInstance.server.onlinePlayers) {
-        player.sendActionBar(Component.text("${player.coins()} Coins"))
+        player.sendActionBar(Component.text("§6${player.coins()} Coins"))
     }
 }
 

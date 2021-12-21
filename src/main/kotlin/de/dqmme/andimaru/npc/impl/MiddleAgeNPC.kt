@@ -30,7 +30,7 @@ object MiddleAgeNPC : NPC() {
         player.teleportAsync(data.teleportLocation ?: spawnLocation()!!)
         player.playSound(player.location, Sound.ENTITY_ENDERMAN_TELEPORT, 20.toFloat(), 1.toFloat())
 
-        val title = FairytaleNPC.data.title ?: "§cData not set"
+        val title = data.title ?: "§cData not set"
 
         player.showTitle(Title.title(Component.text(ChatColor.translateAlternateColorCodes('&', title)), Component.text("")))
     }

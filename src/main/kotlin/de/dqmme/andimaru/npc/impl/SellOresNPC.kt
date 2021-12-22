@@ -17,7 +17,7 @@ import org.bukkit.Material
 import org.bukkit.inventory.ItemStack
 
 object SellOresNPC : NPC() {
-    override val id: String = "sell_food_npc"
+    override val id: String = "sell_ores_npc"
 
     val data = npcData(id)
 

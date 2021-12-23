@@ -19,7 +19,7 @@ class NPCManager : Listener {
     private val npcPool = NPCPool.builder(instance)
         .spawnDistance(100)
         .actionDistance(40)
-        .tabListRemoveTicks(5)
+        .tabListRemoveTicks(20)
         .build()
 
     companion object {

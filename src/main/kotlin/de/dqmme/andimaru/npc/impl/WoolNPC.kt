@@ -39,119 +39,119 @@ object WoolNPC : NPC() {
 
                     button(
                         Slots.RowThreeSlotOne,
-                        woolItem(Material.WHITE_WOOL, price("white_wool"))
+                        sellableItem(Material.WHITE_WOOL, price("white_wool"))
                     ) {
                         sell(it.player, price("white_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowThreeSlotTwo,
-                        woolItem(Material.ORANGE_WOOL, price("orange_wool"))
+                        sellableItem(Material.ORANGE_WOOL, price("orange_wool"))
                     ) {
                         sell(it.player, price("orange_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowThreeSlotThree,
-                        woolItem(Material.MAGENTA_WOOL, price("magenta_wool"))
+                        sellableItem(Material.MAGENTA_WOOL, price("magenta_wool"))
                     ) {
                         sell(it.player, price("magenta_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowThreeSlotFour,
-                        woolItem(Material.LIGHT_BLUE_WOOL, price("light_blue_wool"))
+                        sellableItem(Material.LIGHT_BLUE_WOOL, price("light_blue_wool"))
                     ) {
                         sell(it.player, price("light_blue_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowThreeSlotFive,
-                        woolItem(Material.YELLOW_WOOL, price("yellow_wool"))
+                        sellableItem(Material.YELLOW_WOOL, price("yellow_wool"))
                     ) {
                         sell(it.player, price("yellow_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowThreeSlotSix,
-                        woolItem(Material.LIME_WOOL, price("lime_wool"))
+                        sellableItem(Material.LIME_WOOL, price("lime_wool"))
                     ) {
                         sell(it.player, price("lime_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowThreeSlotSeven,
-                        woolItem(Material.PINK_WOOL, price("pink_wool"))
+                        sellableItem(Material.PINK_WOOL, price("pink_wool"))
                     ) {
                         sell(it.player, price("pink_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowThreeSlotEight,
-                        woolItem(Material.GRAY_WOOL, price("gray_wool"))
+                        sellableItem(Material.GRAY_WOOL, price("gray_wool"))
                     ) {
                         sell(it.player, price("gray_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowThreeSlotNine,
-                        woolItem(Material.LIGHT_GRAY_WOOL, price("light_gray_wool"))
+                        sellableItem(Material.LIGHT_GRAY_WOOL, price("light_gray_wool"))
                     ) {
                         sell(it.player, price("light_gray_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowTwoSlotOne,
-                        woolItem(Material.CYAN_WOOL, price("cyan_wool"))
+                        sellableItem(Material.CYAN_WOOL, price("cyan_wool"))
                     ) {
                         sell(it.player, price("cyan_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowTwoSlotTwo,
-                        woolItem(Material.PURPLE_WOOL, price("purple_wool"))
+                        sellableItem(Material.PURPLE_WOOL, price("purple_wool"))
                     ) {
                         sell(it.player, price("purple_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowTwoSlotThree,
-                        woolItem(Material.BLUE_WOOL, price("blue_wool"))
+                        sellableItem(Material.BLUE_WOOL, price("blue_wool"))
                     ) {
                         sell(it.player, price("blue_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowTwoSlotFour,
-                        woolItem(Material.BROWN_WOOL, price("brown_wool"))
+                        sellableItem(Material.BROWN_WOOL, price("brown_wool"))
                     ) {
                         sell(it.player, price("brown_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowTwoSlotFive,
-                        woolItem(Material.GREEN_WOOL, price("green_wool"))
+                        sellableItem(Material.GREEN_WOOL, price("green_wool"))
                     ) {
                         sell(it.player, price("green_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowTwoSlotSix,
-                        woolItem(Material.RED_WOOL, price("red_wool"))
+                        sellableItem(Material.RED_WOOL, price("red_wool"))
                     ) {
                         sell(it.player, price("red_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowTwoSlotSeven,
-                        woolItem(Material.BLACK_WOOL, price("black_wool"))
+                        sellableItem(Material.BLACK_WOOL, price("black_wool"))
                     ) {
                         sell(it.player, price("black_wool"), it.bukkitEvent.currentItem!!)
                     }
 
                     button(
                         Slots.RowTwoSlotEight,
-                        woolItem(Material.SHEEP_SPAWN_EGG, price("sheep_spawn_egg"))
+                        sellableItem(Material.SHEEP_SPAWN_EGG, price("sheep_spawn_egg"))
                     ) {
                         sell(it.player, price("sheep_spawn_egg"), it.bukkitEvent.currentItem!!)
                     }

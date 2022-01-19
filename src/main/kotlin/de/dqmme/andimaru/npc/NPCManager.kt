@@ -37,6 +37,7 @@ class NPCManager : Listener {
             CommonMobNPC,
             FairytaleNPC,
             FutureNPC,
+            GlassNPC,
             HeadNPC,
             MiddleAgeNPC,
             RareEnchantmentsNPC,

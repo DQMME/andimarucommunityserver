@@ -48,6 +48,25 @@ channeling_1: 400
 riptide_1: 500
 loyality_1: 550
 
+#Glass
+glass: 10
+tinted_glass: 10
+white_glass: 10
+orange_glass: 10
+magenta_glass: 10
+light_blue_glass: 10
+yellow_glass: 10
+lime_glass: 10
+pink_glass: 10
+gray_glass: 10
+light_gray_glass: 10
+cyan_glass: 10
+blue_glass: 10
+brown_glass: 10
+green_glass: 10
+red_glass: 10
+black_glass: 10
+
 #Spawn Eggs
 pig_spawn_egg: 300
 cow_spawn_egg: 400

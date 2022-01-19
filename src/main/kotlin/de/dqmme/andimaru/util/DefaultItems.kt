@@ -35,3 +35,11 @@ fun newEnchantedBook(oldBook: ItemStack) = itemStack(Material.ENCHANTED_BOOK) {
         }
     }
 }
+
+fun woolItem(material: Material, price: Double) = itemStack(material) {
+    meta {
+        setLore {
+            +"§6Preis: $price"
+        }
+    }
+}

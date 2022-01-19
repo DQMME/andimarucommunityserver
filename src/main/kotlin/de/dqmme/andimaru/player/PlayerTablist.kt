@@ -6,6 +6,7 @@ import de.dqmme.andimaru.manager.tablistHeader
 import net.axay.kspigot.main.KSpigotMainInstance
 import net.axay.kspigot.runnables.task
 import net.kyori.adventure.text.Component
+import org.bukkit.ChatColor
 import org.bukkit.Statistic
 import org.bukkit.entity.Player
 
@@ -77,14 +78,16 @@ fun Player.removeFromScoreboard() {
 
 fun Player.setPlayerListHeaderFooter() {
     val playtime = formatPlaytime(playtimeSeconds())
-    val header = tablistHeader()?.replace("\${player_playtime}", playtime)
-    val footer = tablistFooter()?.replace("\${player_playtime}", playtime)
+    var header = tablistHeader()?.replace("\${player_playtime}", playtime)
+    var footer = tablistFooter()?.replace("\${player_playtime}", playtime)
 
     if(header != null) {
+        header = ChatColor.translateAlternateColorCodes('&', header)
         sendPlayerListHeader(Component.text(header))
     }
 
     if(footer != null) {
+        footer = ChatColor.translateAlternateColorCodes('&', footer)
         sendPlayerListFooter(Component.text(footer))
     }
 }

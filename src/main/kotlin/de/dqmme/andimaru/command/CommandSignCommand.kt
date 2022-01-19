@@ -13,7 +13,7 @@ class CommandSignCommand : BukkitCommand("commandsign") {
 
     init {
         permission = "community.command.commandsign"
-        server.commandMap.register("commandsign", this)
+        server.commandMap.register("community", this)
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {

@@ -12,7 +12,7 @@ class SetSpawnCommand : BukkitCommand("setspawn") {
     private val server = KSpigotMainInstance.server
 
     init {
-        server.commandMap.register("setspawn", this)
+        server.commandMap.register("community", this)
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {

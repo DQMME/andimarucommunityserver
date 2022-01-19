@@ -17,7 +17,7 @@ class ClaimManager {
 
             if (!player.hasFlyingEnabled()) continue
 
-            val claim = GriefPrevention.instance.dataStore.getClaimAt(player.location, true, null)
+            val claim = GriefPrevention.instance.dataStore.getClaimAt(player.location, false, null)
 
             if (claim == null) {
                 player.allowFlight = false

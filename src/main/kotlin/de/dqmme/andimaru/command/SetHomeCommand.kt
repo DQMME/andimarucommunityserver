@@ -12,7 +12,7 @@ class SetHomeCommand : BukkitCommand("sethome") {
     private val server = KSpigotMainInstance.server
 
     init {
-        server.commandMap.register("sethome", this)
+        server.commandMap.register("community", this)
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {

@@ -17,7 +17,7 @@ class WorldManagerCommand : BukkitCommand("worldmanager") {
     init {
         aliases = listOf("wm")
         permission = "community.command.worldmanager"
-        server.commandMap.register("worldmanager", this)
+        server.commandMap.register("community", this)
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {

@@ -258,6 +258,44 @@ object RareMobNPC : NPC() {
                             currentItem.displayName().textValue()
                         )
                     }
+
+                    button(Slots.RowTwoSlotSeven, itemStack(Material.AXOLOTL_SPAWN_EGG) {
+                        meta {
+                            displayName(Component.text("§eAxolotl Spawn Egg"))
+
+                            setLore {
+                                +"§6Preis: ${price("axolotl_spawn_egg")} Coins"
+                            }
+                        }
+                    }) {
+                        val currentItem = it.bukkitEvent.currentItem!!
+
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("axolotl_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
+                    }
+
+                    button(Slots.RowTwoSlotEight, itemStack(Material.GLOW_SQUID_SPAWN_EGG) {
+                        meta {
+                            displayName(Component.text("§bGlow Squid Spawn Egg"))
+
+                            setLore {
+                                +"§6Preis: ${price("glow_squid_spawn_egg")} Coins"
+                            }
+                        }
+                    }) {
+                        val currentItem = it.bukkitEvent.currentItem!!
+
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("glow_squid_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
+                    }
                 }
             }
         )

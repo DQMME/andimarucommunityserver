@@ -5,9 +5,6 @@ import de.dqmme.andimaru.npc.NPC
 import de.dqmme.andimaru.npc.teleportNPCData
 import de.dqmme.andimaru.manager.spawnLocation
 import net.axay.kspigot.main.KSpigotMainInstance
-import net.kyori.adventure.text.Component
-import net.kyori.adventure.title.Title
-import org.bukkit.ChatColor
 import org.bukkit.Location
 import org.bukkit.Sound
 
@@ -29,9 +26,5 @@ object FairytaleNPC : NPC() {
 
         player.teleportAsync(data.teleportLocation ?: spawnLocation()!!)
         player.playSound(player.location, Sound.ENTITY_ENDERMAN_TELEPORT, 20.toFloat(), 1.toFloat())
-
-        val title = data.title ?: "§cData not set"
-
-        player.showTitle(Title.title(Component.text(ChatColor.translateAlternateColorCodes('&', title)), Component.text("")))
     }
 }

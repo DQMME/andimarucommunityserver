@@ -17,7 +17,7 @@ class BuyClaimCommand : BukkitCommand("buyclaim") {
     private val server = KSpigotMainInstance.server
 
     init {
-        server.commandMap.register("buyclaim", this)
+        server.commandMap.register("community", this)
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {
@@ -27,7 +27,7 @@ class BuyClaimCommand : BukkitCommand("buyclaim") {
         }
 
         if (args.isEmpty()) {
-            val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, true, null)
+            val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, false, null)
 
             if (claim == null) {
                 sender.sendMessage(message("claim_not_found"))
@@ -76,7 +76,7 @@ class BuyClaimCommand : BukkitCommand("buyclaim") {
                 return false
             }
 
-            val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, true, null)
+            val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, false, null)
 
             if (claim == null) {
                 sender.sendMessage(message("claim_not_found"))
@@ -102,7 +102,7 @@ class BuyClaimCommand : BukkitCommand("buyclaim") {
                 return false
             }
 
-            if (args[0].lowercase() == "create") {
+            if (args[0].lowercase() != "create") {
                 sender.sendMessage(
                     message("invalid_usage")
                         .replace("\${command_usage}", "/buyclaim create <price>")
@@ -110,7 +110,7 @@ class BuyClaimCommand : BukkitCommand("buyclaim") {
                 return false
             }
 
-            val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, true, null)
+            val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, false, null)
 
             if (claim == null) {
                 sender.sendMessage(message("claim_not_found"))

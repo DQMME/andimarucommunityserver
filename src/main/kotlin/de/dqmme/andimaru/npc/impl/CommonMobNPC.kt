@@ -178,7 +178,21 @@ object CommonMobNPC : NPC() {
                         )
                     }
 
-                    button(Slots.RowTwoSlotThree, itemStack(Material.SADDLE) {
+                    button(Slots.RowTwoSlotThree, itemStack(Material.GOAT_SPAWN_EGG) {
+                        meta {
+                            displayName(Component.text("§7Ziegen Spawn Ei"))
+
+                            setLore {
+                                +"§6Preis: ${price("goat_spawn_egg")} Coins"
+                            }
+                        }
+                    }) {
+                        val currentItem = it.bukkitEvent.currentItem!!
+
+                        sell(it.player, currentItem.type, price("goat_spawn_egg"), currentItem.displayName().textValue())
+                    }
+
+                    button(Slots.RowTwoSlotFour, itemStack(Material.SADDLE) {
                         meta {
                             displayName(Component.text("§6Sattel"))
 
@@ -192,7 +206,7 @@ object CommonMobNPC : NPC() {
                         sell(it.player, currentItem.type, price("saddle"), currentItem.displayName().textValue())
                     }
 
-                    button(Slots.RowTwoSlotFour, itemStack(Material.COOKED_BEEF) {
+                    button(Slots.RowTwoSlotFive, itemStack(Material.COOKED_BEEF) {
                         meta {
                             displayName(Component.text("§6Gebratenes Fleisch"))
 
@@ -206,7 +220,7 @@ object CommonMobNPC : NPC() {
                         sell(it.player, currentItem.type, price("cooked_beef"), currentItem.displayName().textValue())
                     }
 
-                    button(Slots.RowTwoSlotFive, itemStack(Material.CARROT) {
+                    button(Slots.RowTwoSlotSix, itemStack(Material.CARROT) {
                         meta {
                             displayName(Component.text("§6Karotte"))
 
@@ -220,7 +234,7 @@ object CommonMobNPC : NPC() {
                         sell(it.player, currentItem.type, price("carrot"), currentItem.displayName().textValue())
                     }
 
-                    button(Slots.RowTwoSlotSix, itemStack(Material.POTATO) {
+                    button(Slots.RowTwoSlotSeven, itemStack(Material.POTATO) {
                         meta {
                             displayName(Component.text("§eKartoffel"))
 

@@ -13,7 +13,7 @@ class GamemodeCommand : BukkitCommand("gamemode") {
     init {
         aliases = listOf("gm")
         permission = "community.command.gamemode"
-        server.commandMap.register("gamemode", this)
+        server.commandMap.register("community", this)
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {

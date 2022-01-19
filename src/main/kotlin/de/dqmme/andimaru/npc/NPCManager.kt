@@ -17,9 +17,9 @@ import com.github.juliarn.npc.NPC as FinalNPC
 class NPCManager : Listener {
     private val instance = KSpigotMainInstance
     private val npcPool = NPCPool.builder(instance)
-        .spawnDistance(100)
+        .spawnDistance(500)
         .actionDistance(40)
-        .tabListRemoveTicks(20)
+        .tabListRemoveTicks(40)
         .build()
 
     companion object {
@@ -29,6 +29,7 @@ class NPCManager : Listener {
     fun registerNPCs() {
         instance.server.pluginManager.registerEvents(this, instance)
         val npcsToRegister = listOf(
+            AndiNPC,
             BookNPC,
             ClaimNPC0,
             ClaimNPC1,
@@ -42,7 +43,8 @@ class NPCManager : Listener {
             RareMobNPC,
             SellFoodNPC,
             SellOresNPC,
-            SellRaresNPC
+            SellRaresNPC,
+            WoolNPC
         )
 
         for (npc in npcsToRegister) {

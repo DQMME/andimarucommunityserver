@@ -14,6 +14,7 @@ class AndimaruCommunity : KSpigot() {
     override fun startup() {
         saveFiles()
 
+        reloadAdminClaims()
         reloadBuyClaims()
         reloadCoins()
         reloadConfigFile()
@@ -30,6 +31,7 @@ class AndimaruCommunity : KSpigot() {
         reloadNPCData()
         NPCManager().registerNPCs()
 
+        AdminClaimManager()
         ClaimManager()
 
         refreshPlayerTablist()
@@ -54,6 +56,7 @@ class AndimaruCommunity : KSpigot() {
     }
 
     private fun registerCommands() {
+        AdminClaimCommand()
         BuyClaimCommand()
         CoinsCommand()
         CommandSignCommand()

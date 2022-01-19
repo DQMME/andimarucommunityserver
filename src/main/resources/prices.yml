@@ -56,6 +56,7 @@ cod_spawn_egg: 50
 donkey_spawn_egg: 1000
 horse_spawn_egg: 2000
 mooshroom_cow_spawn_egg: 600
+goat_spawn_egg: 600
 dolphin_spawn_egg: 2000
 polar_bear_spawn_egg: 3000
 pufferfish_spawn_egg: 100
@@ -68,6 +69,9 @@ ocelot_spawn_egg: 500
 fox_spawn_egg: 3000
 parrot_spawn_egg: 2000
 rabbit_spawn_egg: 400
+axolotl_spawn_egg: 2000
+glow_squid_spawn_egg: 700
+sheep_spawn_egg: 400
 
 #misc
 saddle: 50
@@ -75,6 +79,24 @@ cooked_beef: 10
 carrot: 10
 potato: 20
 player_skull: 9000
+
+#Wool
+white_wool: 20
+orange_wool: 20
+magenta_wool: 20
+light_blue_wool: 20
+yellow_wool: 20
+lime_wool: 20
+pink_wool: 20
+gray_wool: 20
+light_gray_wool: 20
+cyan_wool: 20
+purple_wool: 20
+blue_wool: 20
+brown_wool: 20
+green_wool: 20
+red_wool: 20
+black_wool: 20
 
 ##Selling Prices
 #Ores

@@ -33,7 +33,7 @@ buyclaim_bought: "${prefix} §aYou successfully bought this §eClaim §afor §6$
 #Available variables: none
 buyclaim_removed: "${prefix} §aYou successfully removed this BuyClaim."
 #Available variables: ${price}
-buyclaim_registered: "${prefix} §aYou successfully registered a new BuyClaim for §6${price} Coins $a."
+buyclaim_registered: "${prefix} §aYou successfully registered a new BuyClaim for §6${price} Coins§a."
 
 #Coins
 

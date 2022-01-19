@@ -13,7 +13,7 @@ class HomeCommand : BukkitCommand("home") {
     private val server = KSpigotMainInstance.server
 
     init {
-        server.commandMap.register("home", this)
+        server.commandMap.register("community", this)
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {

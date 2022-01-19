@@ -13,6 +13,7 @@ repositories {
     maven("https://papermc.io/repo/repository/maven-public/")
     maven("https://repo.codemc.io/repository/maven-snapshots/")
     maven("https://jitpack.io")
+    maven("https://repo.dmulloy2.net/repository/public/")
 }
 
 dependencies {
@@ -21,6 +22,9 @@ dependencies {
 
     // KSpigot dependency
     implementation("net.axay:kspigot:1.17.4")
+
+    //ProtocolLib dependency
+    compileOnly("com.comphenix.protocol:ProtocolLib:4.7.0")
 
     // GriefPrevention dependency
     compileOnly("com.github.TechFortress:GriefPrevention:16.17.1")
@@ -31,8 +35,8 @@ dependencies {
     //OkHttp dependency
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
 
+    //AnvilGUI dependency
     implementation("net.wesjd:anvilgui:1.5.3-SNAPSHOT")
-
 }
 
 tasks {

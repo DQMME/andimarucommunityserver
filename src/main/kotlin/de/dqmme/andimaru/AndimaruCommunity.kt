@@ -12,6 +12,7 @@ import net.axay.kspigot.main.KSpigot
 
 class AndimaruCommunity : KSpigot() {
     override fun startup() {
+        onPing()
         saveFiles()
 
         reloadAdminClaims()

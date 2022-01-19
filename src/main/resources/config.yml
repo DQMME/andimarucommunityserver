@@ -2,3 +2,5 @@
 tablist_header: "${player_playtime}"
 #Available variables: ${player_playtime}
 tablist_footer: "${player_playtime}"
+#Available variables: ${online_players}, §{max_players}
+playercount_text: ""

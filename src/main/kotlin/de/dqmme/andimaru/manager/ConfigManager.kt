@@ -26,6 +26,10 @@ fun tablistFooter(): String? {
     return fileConfiguration.getString("tablist_footer")
 }
 
+fun playerCountText(): String? {
+    return fileConfiguration.getString("playercount_test")
+}
+
 fun reloadConfigFile() {
     fileConfiguration = YamlConfiguration.loadConfiguration(configFile)
     saveConfigFile()

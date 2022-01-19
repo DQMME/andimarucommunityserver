@@ -13,7 +13,7 @@ class ClaimManager {
 
     private fun check() = task(true, 0, 20) {
         for (player in KSpigotMainInstance.server.onlinePlayers) {
-            if(player.gameMode != GameMode.SURVIVAL) continue
+            if (player.gameMode != GameMode.SURVIVAL) continue
 
             if (!player.hasFlyingEnabled()) continue
 
@@ -23,7 +23,7 @@ class ClaimManager {
                 player.allowFlight = false
                 player.isFlying = false
             } else {
-                if(!claim.managers.contains(player.uniqueId.toString()) && claim.ownerID != player.uniqueId) continue
+                if (!claim.managers.contains(player.uniqueId.toString()) && claim.ownerID != player.uniqueId) continue
 
                 player.allowFlight = true
                 player.isFlying = true

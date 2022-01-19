@@ -28,7 +28,7 @@ fun Player.deaths(): Int {
     return getStatistic(Statistic.DEATHS)
 }
 
-fun Player.playtimeSeconds(): Int{
+fun Player.playtimeSeconds(): Int {
     return getStatistic(Statistic.PLAY_ONE_MINUTE) / 20
 }
 
@@ -81,29 +81,29 @@ fun Player.setPlayerListHeaderFooter() {
     var header = tablistHeader()?.replace("\${player_playtime}", playtime)
     var footer = tablistFooter()?.replace("\${player_playtime}", playtime)
 
-    if(header != null) {
+    if (header != null) {
         header = ChatColor.translateAlternateColorCodes('&', header)
         sendPlayerListHeader(Component.text(header))
     }
 
-    if(footer != null) {
+    if (footer != null) {
         footer = ChatColor.translateAlternateColorCodes('&', footer)
         sendPlayerListFooter(Component.text(footer))
     }
 }
 
-fun refreshPlayerTablist() = task(true, 0, 10*20) {
-    for(player in KSpigotMainInstance.server.onlinePlayers) {
+fun refreshPlayerTablist() = task(true, 0, 10 * 20) {
+    for (player in KSpigotMainInstance.server.onlinePlayers) {
         player.setPlayerListHeaderFooter()
     }
 }
 
 private fun formatPlaytime(seconds: Int): String {
-    if(seconds < 60) {
+    if (seconds < 60) {
         return "$seconds Sekunden"
     }
 
-    if(seconds < 3600) {
+    if (seconds < 3600) {
         return "${seconds / 60} Minuten"
     }
 

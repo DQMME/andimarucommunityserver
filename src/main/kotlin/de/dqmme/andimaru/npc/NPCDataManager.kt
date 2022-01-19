@@ -42,7 +42,15 @@ fun teleportNPCData(id: String): TeleportNPCData {
     val skinSignature = fileConfiguration.getString("$id.skin_signature") ?: ""
     val skinValue = fileConfiguration.getString("$id.skin_value") ?: ""
 
-    return TeleportNPCData(displayName, location, imitatePlayer, lookAtPlayer, teleportLocation, title, Skin(skinSignature, skinValue))
+    return TeleportNPCData(
+        displayName,
+        location,
+        imitatePlayer,
+        lookAtPlayer,
+        teleportLocation,
+        title,
+        Skin(skinSignature, skinValue)
+    )
 }
 
 fun setTeleportNPCData(id: String, teleportNPCData: TeleportNPCData) {

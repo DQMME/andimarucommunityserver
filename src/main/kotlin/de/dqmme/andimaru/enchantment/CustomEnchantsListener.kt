@@ -14,7 +14,7 @@ class CustomEnchantsListener {
         val player = event.player
         val itemInMainHand = player.inventory.itemInMainHand
 
-        if(itemInMainHand.itemMeta == null) return@listen
+        if (itemInMainHand.itemMeta == null) return@listen
 
         val drops = event.block.drops
 

@@ -189,7 +189,12 @@ object CommonMobNPC : NPC() {
                     }) {
                         val currentItem = it.bukkitEvent.currentItem!!
 
-                        sell(it.player, currentItem.type, price("goat_spawn_egg"), currentItem.displayName().textValue())
+                        sell(
+                            it.player,
+                            currentItem.type,
+                            price("goat_spawn_egg"),
+                            currentItem.displayName().textValue()
+                        )
                     }
 
                     button(Slots.RowTwoSlotFour, itemStack(Material.SADDLE) {

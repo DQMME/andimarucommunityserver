@@ -15,11 +15,11 @@ fun fetchSkin(mineskinId: String, callback: (Skin?) -> Unit) {
 
     val call = client.newCall(request)
 
-    call.enqueue(object: Callback {
+    call.enqueue(object : Callback {
         override fun onResponse(call: Call, response: Response) {
             val responseString = response.body!!.string()
 
-            val jsonObject= Gson().fromJson(responseString, JsonObject::class.java)
+            val jsonObject = Gson().fromJson(responseString, JsonObject::class.java)
             val textures = jsonObject["data"].asJsonObject["texture"].asJsonObject
             val value = textures["value"].asString
             val signature = textures["signature"].asString

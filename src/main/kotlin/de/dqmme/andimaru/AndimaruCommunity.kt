@@ -42,7 +42,7 @@ class AndimaruCommunity : KSpigot() {
     }
 
     private fun saveFiles() {
-        if(!configFile.exists()) {
+        if (!configFile.exists()) {
             saveResource("config.yml", false)
         }
 

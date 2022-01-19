@@ -14,7 +14,7 @@ class AdminClaimCommand : BukkitCommand("adminclaim") {
     }
 
     override fun execute(sender: CommandSender, commandLabel: String, args: Array<out String>): Boolean {
-        if(sender !is Player) {
+        if (sender !is Player) {
             sender.sendMessage(message("not_a_player"))
             return false
         }
@@ -35,13 +35,13 @@ class AdminClaimCommand : BukkitCommand("adminclaim") {
             return false
         }
 
-        when(args[1].lowercase()) {
+        when (args[1].lowercase()) {
             "spawn" -> {
                 val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, false, null)
 
                 println(claim)
 
-                if(claim == null) {
+                if (claim == null) {
                     sender.sendMessage(message("claim_not_found"))
                     return false
                 }
@@ -52,7 +52,7 @@ class AdminClaimCommand : BukkitCommand("adminclaim") {
             "forest" -> {
                 val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, false, null)
 
-                if(claim == null) {
+                if (claim == null) {
                     sender.sendMessage(message("claim_not_found"))
                     return false
                 }
@@ -63,7 +63,7 @@ class AdminClaimCommand : BukkitCommand("adminclaim") {
             "future" -> {
                 val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, false, null)
 
-                if(claim == null) {
+                if (claim == null) {
                     sender.sendMessage(message("claim_not_found"))
                     return false
                 }
@@ -74,7 +74,7 @@ class AdminClaimCommand : BukkitCommand("adminclaim") {
             "city" -> {
                 val claim = GriefPrevention.instance.dataStore.getClaimAt(sender.location, false, null)
 
-                if(claim == null) {
+                if (claim == null) {
                     sender.sendMessage(message("claim_not_found"))
                     return false
                 }
@@ -87,7 +87,7 @@ class AdminClaimCommand : BukkitCommand("adminclaim") {
     }
 
     override fun tabComplete(sender: CommandSender, alias: String, args: Array<out String>): MutableList<String> {
-        if(args.size == 1) return mutableListOf("set")
+        if (args.size == 1) return mutableListOf("set")
 
         return mutableListOf()
     }

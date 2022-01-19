@@ -1,7 +1,10 @@
 package de.dqmme.andimaru.command
 
 import de.dqmme.andimaru.manager.message
-import de.dqmme.andimaru.util.*
+import de.dqmme.andimaru.util.addCoins
+import de.dqmme.andimaru.util.coins
+import de.dqmme.andimaru.util.removeCoins
+import de.dqmme.andimaru.util.replace
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.command.CommandSender
 import org.bukkit.command.defaults.BukkitCommand

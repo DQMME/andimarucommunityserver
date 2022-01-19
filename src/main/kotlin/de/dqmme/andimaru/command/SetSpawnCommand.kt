@@ -1,8 +1,8 @@
 package de.dqmme.andimaru.command
 
 import de.dqmme.andimaru.manager.message
-import de.dqmme.andimaru.util.replace
 import de.dqmme.andimaru.manager.setSpawnLocation
+import de.dqmme.andimaru.util.replace
 import net.axay.kspigot.main.KSpigotMainInstance
 import org.bukkit.command.CommandSender
 import org.bukkit.command.defaults.BukkitCommand

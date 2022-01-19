@@ -5,7 +5,10 @@ import de.dqmme.andimaru.manager.message
 import de.dqmme.andimaru.manager.price
 import de.dqmme.andimaru.npc.NPC
 import de.dqmme.andimaru.npc.npcData
-import de.dqmme.andimaru.util.*
+import de.dqmme.andimaru.util.addCoins
+import de.dqmme.andimaru.util.blackGlassItem
+import de.dqmme.andimaru.util.coins
+import de.dqmme.andimaru.util.replace
 import net.axay.kspigot.gui.*
 import net.axay.kspigot.items.itemStack
 import net.axay.kspigot.items.meta

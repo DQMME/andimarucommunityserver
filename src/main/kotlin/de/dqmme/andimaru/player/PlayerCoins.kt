@@ -8,7 +8,7 @@ import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.entity.Player
 import java.io.File
 
-private val coinFile = File(KSpigotMainInstance.dataFolder, "prices.yml")
+private val coinFile = File(KSpigotMainInstance.dataFolder, "coins.yml")
 private lateinit var fileConfiguration: FileConfiguration
 
 fun Player.coins(): Double {

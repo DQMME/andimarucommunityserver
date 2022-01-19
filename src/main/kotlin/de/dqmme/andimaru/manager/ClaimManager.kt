@@ -1,10 +1,19 @@
 package de.dqmme.andimaru.manager
 
 import de.dqmme.andimaru.util.hasFlyingEnabled
+import me.ryanhamshire.GriefPrevention.Claim
 import me.ryanhamshire.GriefPrevention.GriefPrevention
 import net.axay.kspigot.main.KSpigotMainInstance
 import net.axay.kspigot.runnables.task
 import org.bukkit.GameMode
+import org.bukkit.configuration.file.YamlConfiguration
+import java.io.File
+
+fun Claim.builders(): List<String> {
+    val claimFile = File(GriefPrevention.instance.dataFolder, "/ClaimData/$id")
+    val claimConf = YamlConfiguration.loadConfiguration(claimFile)
+    return claimConf.getStringList("Builders")
+}
 
 class ClaimManager {
     init {
@@ -23,7 +32,10 @@ class ClaimManager {
                 player.allowFlight = false
                 player.isFlying = false
             } else {
-                if (!claim.managers.contains(player.uniqueId.toString()) && claim.ownerID != player.uniqueId) continue
+                println(claim.builders())
+                if (!claim.managers.contains(player.uniqueId.toString()) && claim.ownerID != player.uniqueId && !claim.builders()
+                        .contains(player.uniqueId.toString())
+                ) continue
 
                 player.allowFlight = true
                 player.isFlying = true

@@ -57,7 +57,7 @@ class NPCCommand : BukkitCommand("npc") {
                             iconGenerator = {
                                 ItemStack(it)
                             },
-                            onClick = { it, element ->
+                            onClick = { it, _ ->
                                 val currentItem = it.bukkitEvent.currentItem
 
                                 if (currentItem == null) {
@@ -97,7 +97,7 @@ class NPCCommand : BukkitCommand("npc") {
                                                 }) {
                                                     AnvilGUI.Builder()
                                                         .onClose { obj: Player -> obj.closeInventory() }
-                                                        .onComplete { player, text ->
+                                                        .onComplete { _, text ->
                                                             val data = npcData(npc.id)
 
                                                             data.displayName = text
@@ -225,7 +225,7 @@ class NPCCommand : BukkitCommand("npc") {
                                                 }) {
                                                     AnvilGUI.Builder()
                                                         .onClose { obj: Player -> obj.closeInventory() }
-                                                        .onComplete { player, text ->
+                                                        .onComplete { _, text ->
                                                             val data = teleportNPCData(npc.id)
 
                                                             data.title = text
@@ -262,7 +262,7 @@ class NPCCommand : BukkitCommand("npc") {
                                                 }) { event ->
                                                     AnvilGUI.Builder()
                                                         .onClose { obj: Player -> obj.closeInventory() }
-                                                        .onComplete { player, text ->
+                                                        .onComplete { _, text ->
                                                             fetchSkin(text) {
                                                                 if (it == null) {
                                                                     event.player.closeInventory()
@@ -307,7 +307,7 @@ class NPCCommand : BukkitCommand("npc") {
                                                 }) {
                                                     AnvilGUI.Builder()
                                                         .onClose { obj: Player -> obj.closeInventory() }
-                                                        .onComplete { player, text ->
+                                                        .onComplete { _, text ->
                                                             val data = npcData(npc.id)
 
                                                             data.displayName = text
@@ -409,7 +409,7 @@ class NPCCommand : BukkitCommand("npc") {
                                                 }) { event ->
                                                     AnvilGUI.Builder()
                                                         .onClose { obj: Player -> obj.closeInventory() }
-                                                        .onComplete { player, text ->
+                                                        .onComplete { _, text ->
                                                             fetchSkin(text) {
                                                                 if (it == null) {
                                                                     event.player.closeInventory()

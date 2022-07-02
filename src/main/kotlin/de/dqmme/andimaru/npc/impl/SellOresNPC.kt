@@ -91,7 +91,7 @@ object SellOresNPC : NPC() {
                         val inventory = it.player.inventory
                         val content = arrayListOf<ItemStack>()
 
-                        for (item in inventory.contents!!) {
+                        for (item in inventory.contents) {
                             if (item == null) continue
 
                             content.add(item)

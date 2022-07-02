@@ -38,7 +38,7 @@ object ClaimNPC1 : NPC() {
 
         player.openGUI(
             kSpigotGUI(GUIType.FOUR_BY_NINE) {
-                title = "§aClaim Blöcke und Homes kaufen"
+                title = Component.text("§aClaim Blöcke und Homes kaufen")
 
                 page(1) {
                     placeholder(Slots.All, blackGlassItem())

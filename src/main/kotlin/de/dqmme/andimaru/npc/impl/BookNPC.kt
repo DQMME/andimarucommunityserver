@@ -11,6 +11,7 @@ import net.axay.kspigot.gui.Slots
 import net.axay.kspigot.gui.kSpigotGUI
 import net.axay.kspigot.gui.openGUI
 import net.axay.kspigot.main.KSpigotMainInstance
+import net.kyori.adventure.text.Component
 import org.bukkit.Location
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.entity.Player
@@ -33,7 +34,7 @@ object BookNPC : NPC() {
 
         player.openGUI(
             kSpigotGUI(GUIType.SIX_BY_NINE) {
-                title = "§6Zauberbücher kaufen"
+                title = Component.text("§6Zauberbücher kaufen")
 
                 page(1) {
                     placeholder(Slots.All, blackGlassItem())
